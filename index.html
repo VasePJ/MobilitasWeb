@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobilitas Web</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <nav class="nav navbar-fixed-top" role="navigation" id="navbarBGC">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button id="burgerMenuBtn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </button>
+                <a class="navbar-brand" href="/">
+                    <div id="logo">
+                        <img alt="Brand" src="img/csm_LOGO_COLOUR_Green_growth_sans_marge_417b2103ae.png">
+                    </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#transportOptId">Transport Options</a></li>
+                    <li class="hideLiElement"><a href="#locationTabsLandscapeOrientation">Locations</a></li>
+                    <li><a href="greenestTransportOptions.html">Greenest Transport Options</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li class="dropdown" id="notLoggedInUser">
+                        <a href="#" class="dropdown-toggle" id="logIn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In 
+                            <span class="glyphicon glyphicon-log-in"></span>
+                        </a>
+                        <a href="#appLinks" class="dropdown-toggle" id="downloadLink">Get the App 
+                                <span class="glyphicon glyphicon-log-in"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="logInFormWrapper">
+                            <form class="form-horizontal" id="logInForm">
+                                <h4 class="text-center logIntextStyle">Log In</h4><br>
+                                <div class="col-md-offset-1 col-md-10">
+                                    <label class="control-label logIntextStyle" for="eMail">Email:</label>
+                                    <div>
+                                        <input type="email" class="form-control eMail" id="eMail" placeholder="Enter email" name="eMail">
+                                    </div>
+                                </div>
+                                <div class="col-md-offset-1 col-md-pass10" id="passwordInput">
+                                    <label class="control-label  logIntextStyle" for="pass">Password:</label>
+                                    <div>
+                                        <input type="password" class="form-control pAss" id="pass" placeholder="Enter password" name="pass">
+                                    </div>
+                                </div> <br><br>
+                                <div>
+                                    <span id="wrongUserOrPass"></span>
+                                </div>
+                                <div class="col-md-offset-1 col-md-10 text-center">
+                                    <div>
+                                        <button type="submit" class="logInBtn" id="logInBtn">Log In</button>
+                                    </div>
+                                </div><br><br>
+                            </form>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="logedInUser">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Profile
+                            <i class="fas fa-user"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="editProfile.html">Edit Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="changePassword.html">Change Password</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="myDashboard.html">My Dashboard</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li id="logOutUser"><a href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" id="heroImage"></div>
+        <div class="row" id="transportOptId">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h3 class="headerText">Transport Options</h3>
+            </div>
+        </div>
+        <!-- Responsive Landing Page -->
+        <div id="responsiveTabs">
+            <div class="panel-group row expandablePanels" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fa fa-bus"></i>
+                                <span class="fontSize">Bus</span c>          
+                           <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body vendorBtnBody">
+                            <h5>
+                                <a href="https://www.publictransport.com.mt/" target="_blank">Public Transport Malta</a>
+                                <p class="vendorText">
+                                    Malta Public Transport Mdina Road, Qormi Malta
+                                </p>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-motorcycle"></i>
+                                <span class="fontSize">Bike</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body vendorBtnBody">
+                            <h5>
+                                <a href="https://www.publictransport.com.mt/" target="_blank">Public Transport Malta</a>
+                                <p class="vendorText">
+                                    Malta Public Transport Mdina Road, Qormi Malta
+                                </p>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-bicycle"></i>
+                                <span class="fontSize">Cycle</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <div class="panel-group row" id="accordion1" role="tablist" aria-multiselectable="true">
+                                <div class="panel ">
+                                    <div class="panel-heading" role="tab" id="panelHeading1">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#contentId1" aria-expanded="true" aria-controls="collapseOne">
+                                                <span>Eco Bikes Malta</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading1">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Eco Bikes Malta</a>
+                                                <p class="vendorText">
+                                                    Eco Bikes Malta
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="panelHeading2">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#contentId2" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Be Green</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading2">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Be Green</a>
+                                                <p class="vendorText">
+                                                    Be Green
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Electric Car</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <div class="panel-group row" id="accordion2" role="tablist" aria-multiselectable="true">
+                                <div class="panel ">
+                                    <div class="panel-heading" role="tab" id="panelHeading4">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#contentId4" aria-expanded="true" aria-controls="collapseOne">
+                                                <span>Roling Geelk</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading4">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Rolling Geeks</a>
+                                                <p class="vendorText">
+                                                    Rolling Geeks
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel ">
+                                    <div class="panel-heading" role="tab" id="panelHeading5">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#contentId5" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Smarter Car Rentals</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading5">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Smarter Car Rentals</a>
+                                                <p class="vendorText">
+                                                    Smarter Car Rentals
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Ferry</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <div class="panel-group row" id="accordion3" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="panelHeading6">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#contentId7" aria-expanded="true" aria-controls="collapseOne">
+                                                <span>Public Transport Malta</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading6">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Public Transport Malta</a>
+                                                <p class="vendorText">
+                                                    Public Transport Malta
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="panelHeading7">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#contentId8" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Gozzo Channel</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading7">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Gozzo Channel</a>
+                                                <p class="vendorText">
+                                                    Gozzo Channel
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel ">
+                                    <div class="panel-heading" role="tab" id="panelHeading8">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#contentId9" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Valleta Ferry Service</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading8">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Valleta Ferry Service</a>
+                                                <p class="vendorText">
+                                                    Valleta Ferry Service
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Taxi</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body vendorBtnBody">
+                            <h5>
+                                <a href="https://www.publictransport.com.mt/" target="_blank">Malta Airport</a>
+                                <p class="vendorText">
+                                    Malta Airport
+                                </p>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Car Sharing</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body">
+                            <div class="panel-group row" id="accordion6" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="panelHeading7">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#contentId10" aria-expanded="true" aria-controls="collapseOne">
+                                                <span>Bolt</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading7">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Bolt</a>
+                                                <p class="vendorText">
+                                                    Bolt
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="panelHeading8">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion6" href="#contentId11" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>Go To</span>
+                                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="contentId11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading8">
+                                        <div class="panel-body vendorBtnBody">
+                                            <h5>
+                                                <a href="https://www.publictransport.com.mt/" target="_blank">Go To</a>
+                                                <p class="vendorText">
+                                                    Go To
+                                                </p>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Responsive Landing Page -->
+        <!-- Transport options -->
+        <div class="row" id="landingPage">
+            <div class="col-md-10 col-md-offset-1">
+                <ul class="nav nav-tabs nav-justified transport-options-nav" role="tablist" id="tabs">
+                    <div id="animate-first-bottom"></div>
+                    <div id="animate-first-vertical"></div>
+                    <div id="animate-top"></div>
+                    <div id="animate-second-vertical"></div>
+                    <div id="animate-second-bottom"></div>
+                    <li role="presentation" class="tab active">
+                        <a href="#bus" aria-controls="home" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fa fa-bus fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Bus</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#bike" aria-controls="bike" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fa fa-motorcycle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Bike</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#cycle" aria-controls="cycle" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fa fa-bicycle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Cycle</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#elestricCar" aria-controls="elestricCar" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fas fa-charging-station fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Electrical Car</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#ferry" aria-controls="ferry" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fas fa-ship fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Ferry</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#taxi" aria-controls="taxi" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fas fa-taxi fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Taxi</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="tab">
+                        <a href="#carShare" aria-controls="carShare" role="tab" data-toggle="tab">
+                            <div>
+                                <i class="fas fa-car fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Car Sharing</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--  Transport Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="bus">
+                        <div class="row">
+                            <div class="col-md-12 headerText">
+                                <a href="https://www.publictransport.com.mt/" target="_blank">
+                                    <h3 class="tabHeader">Public Transport Malta</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 textSeparator">
+                            <p>MALTA PUBLIC TRANSPORT is the national bus operator responsible to operate all public transport services by bus on the Maltese islands. We form part of an international network of transport companies present in four continents
+                                with over 40,000 employees. With over 120 years of experience in efficient management of urban transport as well as regional, national and international bus, coach and rail transport, our philosophy is to maximize on this
+                                international experience and adapt it to the local context wherever we operate, including Malta.
+                            </p>
+                            <p>As the national bus operator, we cover 30 million kilometers every year with our fleet of 430 buses and a team of over 1,300 people. In the past year we carried over 53 million passengers, a significant increase when compared
+                                to previous years. Notwithstanding all of this, we are very well aware of the challenges we face and we are committed to improve the overall bus user experience and to provide a safe, credible and efficient bus service
+                                in Malta and Gozo. Our vision is to be the natural choice for people wanting to travel easily in Malta by providing an excellent service. Our company is ISO 9001:2015 certified.
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="bike">
+                        <div class="row">
+                            <div class="col-md-12 headerText">
+                                <a href="https://www.publictransport.com.mt/" target="_blank">
+                                    <h3 class="tabHeader">Public Transport Malta</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 textSeparator">
+                            <p>MALTA PUBLIC TRANSPORT is the national bus operator responsible to operate all public transport services by bus on the Maltese islands. We form part of an international network of transport companies present in four continents
+                                with over 40,000 employees. With over 120 years of experience in efficient management of urban transport as well as regional, national and international bus, coach and rail transport, our philosophy is to maximize on this
+                                international experience and adapt it to the local context wherever we operate, including Malta.
+                            </p>
+                            <p>As the national bus operator, we cover 30 million kilometers every year with our fleet of 430 buses and a team of over 1,300 people. In the past year we carried over 53 million passengers, a significant increase when compared
+                                to previous years. Notwithstanding all of this, we are very well aware of the challenges we face and we are committed to improve the overall bus user experience and to provide a safe, credible and efficient bus service
+                                in Malta and Gozo. Our vision is to be the natural choice for people wanting to travel easily in Malta by providing an excellent service. Our company is ISO 9001:2015 certified.
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane col-md-12" id="cycle">
+                        <ul class="nav nav-pills text-center vendorBtns" role="tablist" id="tabs">
+                            <li role="presentation" class="active"><a href="#vendor1" aria-controls="vendor1" role="tab" data-toggle="tab">Eco Bikes Malt</a></li>
+                            <li role="presentation" class=" "><a href="#vendor2" aria-controls="vendor2" role="tab" data-toggle="tab">Be Green</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="vendor1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="http://ecobikesmalta.com/" target="_blank">
+                                            <h3 class="tabHeader">Eco Bikes Malta</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 textSeparator">
+                                    <p>EcoBikes Malta the best bicycle rental in Malta and Gozo We love cycle, we love bicycle, we enjoy our work, we do it with passion. We rent bicycle , organise tours and show you where to go. Discover Malta & Gozo by
+                                        bike is a great experience.
+                                    </p>
+                                    <p>
+                                        Our bike rental shop is the only one in Malta with a great service, we have different kind of bikes for rent: MTB , Touring bike and also Electric bike! Rent a bicycle from EcoBikes, you won’t have hidden costs, you pay for the rent and we provide you
+                                        Helmet, lock, repair kit and pump. You can hire a bicycle in Malta and Gozo from our shop and discover all the island , we hare in the best location to start you bike trip. Easy way to all the best areas of Malta
+                                        and easy to go to Gozo. We know what it means preparing for a ride! and we want you start when planned. We’ll be to your place in perfect time. always. We deliver to you bicycle. We also bring to you Helmet, lock,
+                                        repair kit and pump. You can choose from different sizes of Bicycle and helmets. Our staff is always ready to bring you the bikes we have a fantastic car; our ‘Gypsy’ will bring you all the bikes you need. It can
+                                        ride all over Malta and Gozo. We also have a trailer , for large number of bicycles delived.
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="vendor2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="https://www.begreenmalta.net/" target="_blank">
+                                            <h3 class="tabHeader">Be Green</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 textSeparator">
+                                    <p>Offering Something Special<br> WHY RENT WITH US? <br> Quality aluminium frame mountain bikes and electric bikes, most ideal for the Maltese terrain, tell us while you are making your booking so we will make sure we
+                                        have them available on the day of your booking.Deposit Guarantee Passport / 50.00 euro (only cash)
+                                    </p>
+                                    <p>We firmly believe this is one of our strongest qualities when compared against other rental shops. Our team members are more than happy to answer any of your questions before, during, and after the rental process. Not
+                                        satisfied? We’ll be sure to do everything in our power to get the job done right
+                                    </p>
+                                    <p>
+                                        You can pick up your bike anytime you like during the day, the earlier the better for you of course, we open at 9:00. When hiring a bike for 1 day, you have 24h time to use the bike but if you want, you can return it on the same day before the rental
+                                        shop closes at 19:00
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="elestricCar">
+                        <ul class="nav nav-pills text-center vendorBtns" role="tablist" id="tabs">
+                            <li id="elCarVendorBt1" role="presentation" class="active"><a href="#vendor3" aria-controls="vendor3" role="tab" data-toggle="tab">Rooling Geeks</a></li>
+                            <li id="elCarVendorBtn2" role="presentation" class=" "><a href="#vendor4" aria-controls="vendor4" role="tab" data-toggle="tab">Smarter Car Rentals</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="vendor3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="http://www.rolling-geeks.com/" target="_blank">
+                                            <h3 class="tabHeader">Rooling Geeks</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 textSeparator">
+                                    <p>
+                                        You know how you always wanted a robot? Well here’s one on wheels. Rolling Geeks are cars that talk. No, not like Knightrider – think more like C-3PO … with attitude. They’re little electric powered cars, very easy to drive, complete with pre-programmed
+                                        GPS showing you where to go, and what to look at when you’re there. With Rolling Geeks you get all of the knowledge of a tour guide, but with the freedom to park up, get out, and explore whenever you want to – and
+                                        trust us, you’ll want to. In just 2.5 hours you can see 3 of the richest historical cities in Malta, discovering incredible areas you just couldn’t manage in a whole day on foot. Enjoy the sights of Birgu (Vittoriosa),
+                                        Isla (Senglea), Bormla (Cospicua) and their surrounding villages, while the car tells you about them in English, German, French, Italian, Spanish, Dutch, Russian or Mandarin. Rolling Geeks are tours with street
+                                        smarts – it’s how we roll
+                                    </p>
+                                    <p>
+                                        Rolling Geeks are self drive electric cars, complete with pre-programmed GPS that not only take you on the perfect tour, but explain what you’re looking at too. So you get all the benefits of an organised excursion, but with the freedom of being in your
+                                        own quirky electric car. There really is no contest. The cars are unbelievably fun, safe and easy to drive, not to mention environmentally responsible, letting you experience authentic Maltese culture and climate
+                                        first hand. Fancy trying that café, or bunking off the rest of the activity to sit on the beach? No problem. It’s your tour, your way. Start off by enviously scoping out the yachts in the beautiful, Grand Harbour
+                                        Marina. Then enjoy the trendy waterfront lined with cafés and restaurants, before touring to the secluded sandy beach of Rinella Bay – and that’s just the warm up act.
+                                    </p>
+                                    <p>
+                                        There are plenty more things to do and to see. The tour encompasses everything from the famous Malta Film Studios, to imposing forts, to the tiny charming streets that characterise this area. With each turn of the wheel, your talking car tells you about
+                                        the sights in English, French, Spanish, German, Italian, Dutch, Russian or Mandarin.
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="vendor4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="https://www.smartercarrentals.com/" target="_blank">
+                                            <h3 class="tabHeader">Smarter Car Rentals</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 textSeparator">
+                                    <p>
+                                        Twizy’s are ideal for those willing to explore the Maltese Islands. Available in the 80-model version, with the max speed of 85 km/h, our two-seaters are both comfortable and fun to ride. Able to travel up to 100 km without recharge. Twizy’s are ideal
+                                        options not only for sightseeing but also for fast transport within conservation cities like Valletta and Mdina. ​
+                                    </p>
+                                    <p>
+                                        Smarter Car Rentals is a new, innovative company that prides itself on the use of technology while taking care of our planet. After observing the world market trends, we decided to make life more comfortable for the tourists, while contributing and investing
+                                        towards a safer, greener environment. Hence choosing the electric Renault Twizy 80 Technic. You may wonder why. Simply because our two-seater Twizy’s can offer you: zero emissions;silent to drive fast and fun. the
+                                        freedom of a bike the fun of avoiding traffic by using bus lanes no need to wear a helmet the comfort and stability of a car safety by wearing seatbelts a cool interior even in the hottest day easy parking. Twizy’s
+                                        are fun, easy to ride and its battery lasts for up to 100 km. In case you run out of power, just plug it into any domestic (240V) socket and away you go. addition, Malta has recharging points for electric cars throughout
+                                        the island.
+
+                                    </p>
+                                    <p>Is it your first time in Malta? Are you worried about driving? Don’t fret. Our rental service is affordable and offers you GPS, maps and a rescue service that will not let you down. Why wait? Just pre-book our Twizy’s
+                                        and speed up to visit the Maltese Islands. You can choose to visit our modern shops or immerse yourself in history by visiting our ancient sites and temples. Choose Smarter, go green, go faster and have more time
+                                        for fun!
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="ferry">
+                        <div role="tabpanel" class="tab-pane">
+                            <ul class="nav nav-pills text-center vendorBtns" role="tablist" id="tabs">
+                                <li role="presentation" class="active ferryBtns"><a href="#vendor5" aria-controls="vendor5" role="tab" data-toggle="tab">Public Transport Malta</a></li>
+                                <li role="presentation" class="ferryBtns "><a href="#vendor6" aria-controls="vendor6" role="tab" data-toggle="tab">Gozo Channel</a></li>
+                                <li role="presentation" class="ferryBtns"><a href="#vendor7" aria-controls="vendor7" role="tab" data-toggle="tab">Vallet Ferry Service</a></li>
+                            </ul>
+                            <div class="tab-content">
+
+                                <div role="tabpanel" class="tab-pane active" id="vendor5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="https://www.publictransport.com.mt/" target="_blank">
+                                                <h3 class="tabHeader">Public Transport Malta</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 textSeparator">
+                                        <p>Public Transport Malta the national bus operator responsible to operate all public transport services by bus on the Maltese islands. We form part of an international network of transport companies present in four
+                                            continents with over 40,000 employees. With over 120 years of experience in efficient management of urban transport as well as regional, national and international bus, coach and rail transport, our philosophy
+                                            is to maximize on this international experience and adapt it to the local context wherever we operate, including Malta.
+                                        </p>
+                                        <p>As the national bus operator, we cover 30 million kilometers every year with our fleet of 430 buses and a team of over 1,300 people. In the past year we carried over 53 million passengers, a significant increase
+                                            when compared to previous years. Notwithstanding all of this, we are very well aware of the challenges we face and we are committed to improve the overall bus user experience and to provide a safe, credible
+                                            and efficient bus service in Malta and Gozo. Our vision is to be the natural choice for people wanting to travel easily in Malta by providing an excellent service. Our company is ISO 9001:2015 certified.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="vendor6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="https://www.gozochannel.com/" target="_blank">
+                                                <h3 class="tabHeader">Gozo Channel</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 textSeparator">
+                                        <p>
+                                            Gozo Channel was formed in 1979, to maintain, develop, and operate a sea transport service to and from Malta, Gozo and elsewhere which, by the carriage of passengers, freight and mail, will serve the national economy and interest of the Maltese Islands.
+                                            The Company’s first vessels to operate the route were the M/V Ghawdex (purchased in early 1979) the M/V Melitaland and M/V Mgarr (both purchased in early 1980). Initially, these vessels performed an average
+                                            of eight (8) round trips per day.
+                                        </p>
+                                        <p>
+                                            With diversification in mind, a seasonal service to Sicily was introduced in June 1981 with the M/V Ghawdex. The Company operated up to three (3) weekly trips to Siracuse, Catania and eventually Pozzallo and the service became very popular among local
+                                            Maltese and Gozotan wishing to spend a day or more in Sicily. The service was discontinued in 1995. As the traffic between Malta and Gozo increased, more vessels were introduced into the service to cope with
+                                            the demand, and by 1990 the Company was operating five (5) vessels, including a fast ferry service between Mgarr, Sliema and Sa Maison, and performing an average of 27 round trips per day. In that year the Company
+                                            carried 1.93 million passengers and 370,000 cars.
+                                        </p>
+                                        <p>
+                                            Today, Gozo Channel has become one of the leading local maritime companies in Malta, with over 200 employees. On average, the company performs 20,000 trips a year, and ferries around 4.1 million passengers and 1.2 million vehicles annually between the
+                                            two Islands. As shown by its history, over the coming years, the Company will continue to strive to improve its service in line with the development of Gozo and the demands of its customers.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane row" id="vendor7">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="http://www.vallettaferryservices.com/" target="_blank">
+                                                <h3 class="tabHeader">Valleta Ferry Service</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 textSeparator">
+                                        <p>Fastest, easiest and coolest way to travel to Vallet.
+                                        </p>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="taxi">
+                        <div role="tabpanel" class="tab-pane active">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="https://www.maltairport.com/">
+                                        <h3 class="tabHeader">Malta Airport</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-7 textSeparator">
+                                <p>Malta International Airport is a member of the ACI-EUROPE (Airport Council International – Europe). Additionally, several company officials sit on specialised committees and working groups within this council.
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="carShare">
+                        <ul class="nav nav-pills text-center vendorBtns" role="tablist" id="tabs">
+                            <li role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Bolt</a></li>
+                            <li role="presentation" class=" "><a href="#vendor9" aria-controls="vendor9" role="tab" data-toggle="tab">Go To</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="vendor8">
+                                <div class="col-md-12">
+                                    <a href="https://bolt.eu/en/cities/malta">
+                                        <h3 class="tabHeader">Bolt</h3>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 textSeparator">
+                                    <p>
+                                        The fastest-growing ride-hailing platform in the world.
+                                    </p>
+                                    <p>Bolt in Malta Getting around in Malta has never been so easy! No matter where you are on the island, count on Bolt to get there in few minutes. With Bolt, you can find a cab at the tap of a button. Quick, safe and convenient!
+                                    </p>
+                                    <p>
+                                        Bolt, previously known as Taxify, is the leading European transportation platform providing ride-hailing and scooter sharing services. The company’s mission is to make urban travel easier, quicker and more reliable. Founded by Markus Villig, Bolt launched
+                                        in 2013. It’s one of the fastest-growing transportation platforms in the world with investors including Daimler, Didi Chuxing, Korelya Capital and TransferWise co-founder Taavet Hinrikus.
+
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="vendor9">
+                                <div class="col-md-12">
+                                    <a href="https://www.goto.com.mt/" target="_blank">
+                                        <h3 class="">Go To</h3>
+                                    </a>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>GoTo Malta is trusted by over 6,000 COMMUTERS!
+                                    </p>
+                                    <p>
+                                        ONE-WAY CAR SHARING! Do you have a journey you need to take immediately? We’ve got you covered. With fleet of 165 One-Way vehicles around Malta and Gozo, you’ll never be unable to get from A to B again.
+                                    </p>
+                                    <p>
+                                        How it Works? Registration is free and can be done quickly and easily online using our online platform. All we need to know are your personal information, driving licence and credit card details. Once your membership is confirmed, download the GoTo car
+                                        sharing app and you’re good to go! Our per-minute rate covers all of your insurance, charging and parking costs. The rate starts from €0.25 per minute, depending on the membership plan you choose.
+                                    </p>
+                                    <p>
+                                        ROUNDTRIP CAR SHARING! The ideal solution for planned journeys. Great for holiday trips to the beach, business meetings, or just running errands and collecting good Book up to 3 months ahead of your planned journey!
+                                    </p>How it Works?Already a member of GoTo? Our members are eligible to use both Roundtrip and One-way services. If you haven’t registered yet, join us and become a member of our community. We request a photocopy of
+                                    your driver’s licence, which you can upload online. We will verify your driving licence within 24 hours and contact you to confirm your registration.
+                                    </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="img/publicTransportMalta.jpg" style="max-width: 100%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Location Tab panes -->
+        <div class="row" id="locationTabsLandscapeOrientation">
+            <div class="col-md-12 text-center">
+                <h3 class="headerText locationsHeader">Locations</h3>
+            </div>
+        </div>
+        <div class="row locationTabs">
+            <div class="col-md-10 col-md-offset-1">
+                <ul class="nav nav-tabs nav-justified  location-options-nav" role="tablist" id="tabs">
+                    <div id="animate-first-bottom-location"></div>
+                    <div id="animate-first-vertical-location"></div>
+                    <div id="animate-top-location"></div>
+                    <div id="animate-second-vertical-location"></div>
+                    <div id="animate-second-bottom-location"></div>
+
+                    <li role="presentation" class="active locTab">
+                        <a href="#busVendor" aria-controls="home" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fa fa-bus fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Bus</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#bikeVendor" aria-controls="bikeVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-motorcycle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Bike</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#cycleVendor" aria-controls="cycleVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-bicycle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Cycle</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#elestricCarVendor" aria-controls="elestricCarVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-car fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Electric Car</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#ferryferryVendor" aria-controls="ferryVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-ship fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Ferry</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#taxiVendor" aria-controls="taxiVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-car fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Taxi</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="locTab">
+                        <a href="#carShareVendor" aria-controls="carShareVendor" role="tab" data-toggle="tab">
+                            <div class="faElements">
+                                <i class="fas fa-car fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4>Car Sharing</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- location Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="busVendor">
+                        <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                            <li role="presentation" class="active"><a href="#busVendor" aria-controls="" role="tab" data-toggle="tab" id="displayBusVendorBtn">Public Transport Malta</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="bikeVendor">
+                        <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                            <li role="presentation" class="active"><a href="#bikeVendor" aria-controls="" role="tab" data-toggle="tab">Public Transport Malta</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane col-md-12" id="cycleVendor">
+                        <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                            <li role="presentation" class="active"><a href="#vendor1" aria-controls="vendor1" role="tab" data-toggle="tab">Eco Bikes Malt</a></li>
+                            <li role="presentation" class=" "><a href="#vendor2" aria-controls="vendor2" role="tab" data-toggle="tab">Be Green</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="elestricCarVendor">
+                        <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                            <li id="elCarVendorBt1" role="presentation" class="active"><a href="#vendor3" aria-controls="vendor3" role="tab" data-toggle="tab">Rooling Geeks</a></li>
+                            <li id="elCarVendorBtn2" role="presentation" class=" "><a href="#vendor4" aria-controls="vendor4" role="tab" data-toggle="tab">Smarter Car Rentals</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="ferryVendor">
+                        <div role="tabpanel" class="tab-pane">
+                            <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                                <li role="presentation" class="active ferryBtns"><a href="#vendor5" aria-controls="vendor5" role="tab" data-toggle="tab">Public Transport Malta</a></li>
+                                <li role="presentation" class="ferryBtns "><a href="#vendor6" aria-controls="vendor6" role="tab" data-toggle="tab">Gozo Channel</a></li>
+                                <li role="presentation" class="ferryBtns"><a href="#vendor7" aria-controls="vendor7" role="tab" data-toggle="tab">Vallet Ferry Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="taxiVendor">
+                        <div role="tabpanel" class="tab-pane active">
+                            <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                                <li role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Malta Airport</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="carShareVendor">
+                        <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
+                            <li role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Bolt</a></li>
+                            <li role="presentation" class=""><a href="#vendor9" aria-controls="vendor9" role="tab" data-toggle="tab">Go To</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="googleMap" class="row"></div>
+        <div class="row footer" id="appLinks">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 footerWrapper">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 text-left footerItems">
+                        <h4>About Us</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quod velit quidem exercitationem natus quaerat itaque vitae ullam fugit dicta ducimus nihil, delectus ad sunt illum totam tempore id quas?
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 images text-center footerItems">
+                        <div class="row appsWrapper">
+                            <div class="col-md-12">
+                                <a href="#"><img src="img/appstore.png" style="width:150px;margin-bottom: 15px;"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#"><img src="img/googleplay.png" style="width:150px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-4 col-md-4 text-right footerItems">
+                        <h4>Info</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quod velit quidem exercitationem natus quaerat itaque vitae ullam fugit dicta ducimus nihil, delectus ad sunt illum totam tempore id quas?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row copyRights">
+            <div class="col-md-12 text-center">
+                <h5 class="copyRightsFontSize">© 2019 Mobilitas, All rights reserved</h6>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYI5Y7DX8jODIxFV8dsk1ShmBiNeVQyYA&callback=myMap"></script>
+
+</body>
+
+</html>

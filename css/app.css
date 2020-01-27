@@ -1,0 +1,774 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #f7f7f7;
+}
+
+#navbarColapse {
+    color: #10458c;
+}
+
+#burgerMenuBtn {
+    color: black;
+}
+
+#navbarBGC {
+    background-color: white;
+}
+
+#logo img {
+    width: 6em;
+    margin-left: 35px;
+}
+
+#bs-example-navbar-collapse-1 {
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+#wrongUserOrPass {
+    display: none;
+    margin-top: -15px;
+    margin-left: 16px;
+    margin-bottom: 15px;
+    color: red;
+}
+
+#heroImage {
+    background-image: url('../img/cyclist-4546766_1920.jpg');
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+
+.headerText {
+    margin-top: 50px;
+    color: #10458c;
+    font-size: bolder;
+}
+
+.tabHeader {
+    color: #10458c;
+    font-size: bolder;
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.tab-pane {
+    margin-top: 50px;
+}
+
+.nav-tabs {
+    margin-top: 50px;
+    position: relative;
+}
+
+.nav-tabs.nav-justified>li>a {
+    border-radius: 0;
+    border-bottom: 1px solid #fbbe00;
+}
+
+.nav-tabs.nav-justified>.active>a {
+    border: 1px solid #fbbe00;
+    border-top-color: 1px solid #fbbe00;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:focus,
+.nav-tabs.nav-justified>.active>a:hover {
+    border: 1px solid #fbbe00;
+    border-bottom-color: transparent;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    color: black;
+    background-color: #fbbe00;
+}
+
+.nav-pills>li {
+    width: 170px;
+    height: 40px;
+    color: black;
+    background-color: #fbbe00;
+    margin-bottom: 30px;
+}
+
+.ferryBtns a {
+    font-size: small;
+}
+
+.nav-pills>li>a:hover {
+    color: black;
+    background-color: #b68d13;
+}
+
+.vendorBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vendorBtnsLocations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.nav>li>a {
+    color: #10458c;
+}
+
+.testRow {
+    display: block;
+    margin-top: 50px;
+}
+
+#googleMap {
+    height: 25em;
+}
+
+.footer {
+    background-color: #10458c;
+    color: white;
+    padding: 15px;
+}
+
+.footerWrapper {
+    margin-top: 25px;
+}
+
+.images {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.appsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.colapsablePanelsrcImg {
+    width: 100px;
+}
+
+.copyRights {
+    background-color: #15488a;
+    color: white;
+    border-top: 1px solid #1b1464;
+}
+
+.aboutUsWrapper {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.contactUs {
+    margin-bottom: 55px;
+    font-weight: bolder;
+    color: #15488a;
+}
+
+#submitBtn {
+    display: block;
+    margin: 0 auto;
+    background-color: #15488a;
+    color: white;
+    height: 2em;
+    width: 7em;
+    border: 1px solid #04316b;
+}
+
+.contactForm {
+    height: 32em;
+}
+
+#submitBtn:hover {
+    background-color: #2562ac;
+    border: 1px solid #133b70;
+}
+
+#logInForm {
+    width: 25em;
+    height: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+}
+
+#logInFormWrapper {
+    background-color: #f7f7f7!important;
+}
+
+.heroImageText {
+    color: white;
+}
+
+.transporOptHeader,
+.logIntextStyle {
+    color: #15488a;
+    font-weight: bold;
+}
+
+.transporOptHeader {
+    height: 3em;
+    font-weight: bolder;
+}
+
+.logInBtn {
+    background-color: #15488a;
+    color: white;
+    border: 1px solid #15488a;
+    width: 100px;
+    height: 40px;
+}
+
+#editProfileDropdown {
+    color: #15488a;
+}
+
+.editProfileText {
+    color: #15488a;
+    font-weight: bolder;
+    margin-top: 35px;
+}
+
+#myDashBoard {
+    background-color: #15488a;
+    color: white;
+    height: 2.5em;
+}
+
+.myDashboardHeader {
+    font-weight: bolder;
+    color: #15488a;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.dashBoardFav {
+    margin-top: 7px;
+}
+
+#expandableLocations {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.expandableLocation {
+    margin-bottom: 15px;
+}
+
+.myLocationHeaderBordrer {
+    border-bottom: 2px solid green;
+    padding: 10px;
+}
+
+.expandLocationBtn {
+    width: 100%;
+    height: 3em;
+    background-color: #f7f7f7;
+    border: none;
+    color: #10458c;
+    padding-left: 15px;
+}
+
+.userImgIcon {
+    background-color: #bdb8b8;
+    color: white;
+    margin: 0 auto;
+}
+
+.userImgBtn {
+    background-color: #15488a;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dashBoardWrapper {
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.userImageWrap {
+    border: 1px solid #15488a;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userImgDashboard {
+    margin-top: 0;
+}
+
+.myDashboardWrapper {
+    height: 35em;
+}
+
+.textSeparator {
+    margin-top: 25px;
+}
+
+.editUserImg {
+    vertical-align: middle;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.userImageWrapper {
+    margin-top: 25px;
+}
+
+#dashboardNav {
+    background-color: white;
+}
+
+.userImageRow {
+    height: 15em;
+    background-color: #f7f7f7;
+}
+
+.checkbox {
+    margin-left: 95px;
+}
+
+.formWrapper {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.formElement {
+    margin-top: 15px;
+}
+
+.editProfileRow {
+    height: 27em;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#sendBtn {
+    background-color: #15488a;
+    color: white;
+    width: 150px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.changePassBtn {
+    background-color: #15488a;
+    color: white;
+    width: 100px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.changePassBtnWrapp {
+    margin-top: 25px;
+}
+
+.changePassRow {
+    height: 25em;
+}
+
+.changePassRowWrapper {
+    margin-top: 40px;
+}
+
+.changePassHeadre {
+    color: #04316b;
+    font-weight: bolder;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.transport-options-nav {
+    position: relative;
+}
+
+#animate-first-bottom {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+    left: 0;
+}
+
+#animate-first-vertical {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-top {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-second-vertical {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-second-bottom {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-first-bottom-location {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+    left: 0;
+}
+
+#animate-first-vertical-location {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-top-location {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-second-vertical-location {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#animate-second-bottom-location {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fbbe00;
+}
+
+#passwordInput {
+    width: 262px;
+    margin: 0 auto;
+}
+
+
+/* Responsive */
+
+
+/* Landing page  */
+
+@media only screen and (max-width: 480px) {
+    .fontSize {
+        font-size: 14px;
+    }
+    .locationsHeader {
+        display: none;
+    }
+    #logo img {
+        margin-top: 0px;
+        margin-left: 0;
+    }
+    .contactUs {
+        margin-bottom: 30px;
+        font-size: 21px;
+    }
+    .contactForm {
+        height: 30em;
+    }
+    #landingPage {
+        display: none;
+    }
+    .expandablePanels .expandablePanelsContent {
+        width: 70%;
+        margin: 0 auto;
+    }
+    ul>.hideLiElement {
+        display: none;
+    }
+    .headerText {
+        margin-bottom: 35px;
+        font-size: 25px;
+    }
+    .heroImageText {
+        font-size: 15px;
+        margin-top: 45px;
+    }
+    .headerText {
+        font-size: 20px;
+    }
+    .vendorBtnBody {
+        text-align: center;
+    }
+    .vendorText {
+        margin-top: 15px;
+    }
+    .footerWrapper {
+        margin-top: 0;
+    }
+    .panel-heading>.panel-title {
+        color: #10458c;
+    }
+    #heroImage {
+        height: 54vh;
+        background-size: cover;
+    }
+    .transportOptTabsWrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .loctabs,
+    .tabs {
+        width: 900px;
+    }
+    #locPanels {
+        margin-top: 30px;
+    }
+    .btnVendor,
+    .vendorBtn {
+        width: 80px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .transportImg {
+        width: 11em;
+    }
+    .panel.active {
+        display: block;
+        text-align: center;
+    }
+    .paNel.active {
+        display: block;
+        text-align: center;
+    }
+    .colapsablePanelsrcImg {
+        width: 80px;
+    }
+    .footerWrapper {
+        margin-top: 25px;
+    }
+    .footerItems {
+        text-align: center;
+    }
+    .tab {
+        width: 200px;
+        margin: 0 auto;
+    }
+    .fa-small {
+        display: block;
+    }
+    .footerWrapper {
+        margin-top: 0;
+    }
+    #animate-first-bottom {
+        display: none;
+    }
+    #animate-first-vertical {
+        display: none;
+    }
+    #animate-top {
+        display: none;
+    }
+    #animate-second-vertical {
+        display: none;
+    }
+    #animate-second-bottom {
+        display: none;
+    }
+    .nav-tabs.nav-justified>li>a {
+        border-radius: 0;
+        border: 1px solid #fbbe00;
+        max-width: 60%;
+        max-height: 60%;
+        margin: 0 auto;
+    }
+    .nav-tabs.nav-justified>.active>a {
+        border: none;
+        border-top-color: none;
+        border-bottom-color: 1px solid #fbbe00;
+    }
+    .nav-tabs.nav-justified>.active>a,
+    .nav-tabs.nav-justified>.active>a:focus,
+    .nav-tabs.nav-justified>.active>a:hover {
+        border-bottom-color: 1px solid #fbbe00;
+    }
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus,
+    .nav-pills>li.active>a:hover {
+        color: black;
+        background-color: none;
+    }
+    #googleMap {
+        display: none;
+    }
+    .locationTabs {
+        display: none;
+    }
+    #downloadLink {
+        display: block;
+    }
+    #logIn {
+        display: none;
+    }
+    .panel-default>.panel-heading {
+        background-image: none;
+        background-image: none;
+        background-image: none;
+        background-image: none;
+        filter: none;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 768px) {
+    #passwordInput {
+        width: 323px;
+        margin: 0 auto;
+    }
+    #logInFormWrapper {
+        margin-right: -30px;
+    }
+    .nav.navbar-nav.navbar-right>li>a {
+        font-size: 12px;
+    }
+    .nav.navbar-nav.navbar-right {
+        margin-right: 0;
+    }
+    #logo img {
+        margin-top: 4px;
+    }
+    .headerText {
+        font-size: 15px;
+    }
+    .nav.nav-tabs.nav-justified.transport-options-nav>.tab>a>div>i,
+    h4 {
+        font-size: 13px;
+    }
+    #tabs>.tab>a>div>i,
+    h4 {
+        font-size: 15px;
+    }
+    .tabHeader {
+        font-size: 15px;
+    }
+    .textSeparator {
+        font-size: 13px;
+    }
+    .active {
+        font-size: 13px;
+    }
+    .footerItems>h4,
+    p {
+        font-size: 13px;
+    }
+    .faElements {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .paNel.active {
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+    }
+    .btnVendor,
+    .vendorBtn {
+        width: 100px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .fa {
+        font-size: 15px;
+    }
+    #logo img {
+        width: 3.5em;
+        margin-left: 0;
+        margin-top: 12px;
+    }
+    .navbar-right {
+        float: none;
+        margin-right: 23px;
+    }
+    #downloadLink {
+        display: none;
+    }
+    #logIn {
+        display: block;
+    }
+    #responsiveTabs {
+        display: none;
+    }
+    .editProfileRow {
+        height: 35em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .copyRightsFontSize {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 767px) {
+    #landingPage {
+        display: none;
+    }
+    #googleMap {
+        display: none;
+    }
+    .container-fluid>#locationTabsLandscapeOrientation {
+        display: none!important;
+    }
+    .locationTabs {
+        display: none;
+    }
+    .expandablePanels .expandablePanelsContent {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .footer {
+        height: 27em;
+    }
+    .footerItems {
+        text-align: center;
+    }
+    #heroImage {
+        height: 70vh;
+    }
+}
