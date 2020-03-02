@@ -9,6 +9,7 @@
     <title>Mobilitas Web</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="js/progressbar.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -20,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 </head>
 
 <body>
@@ -80,23 +82,295 @@
         <div class="row" id="heroImage">
             <div class="aboutUsWrapper">
                 <div class="text-center heroImageText" id="heroImageTextAboutUs">
-                    <h3 class="heroImageText">Greenest Transport Option</h3 c>
+                    <h3 class="heroImageText">Greenest Transport Option</h3>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="transportOptId">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h3 class="headerText">Transport Options</h3>
+            </div>
+        </div>
+
+           <!-- Responsive Landing Page -->
+           <div id="responsiveTabs">
+            <div class="panel-group row expandablePanels" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default expandablePanelsContent gtoResponsiveTabs">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fa fa-bus"></i>
+                                <span class="fontSize">Bus</span c>          
+                           <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body vendorBtnBody">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveOne" class="col-md-2"></div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-motorcycle"></i>
+                                <span class="fontSize">Bike</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body vendorBtnBody">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveTwo" class="col-md-2"></div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-bicycle"></i>
+                                <span class="fontSize">Cycle</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveThree" class="col-md-2"></div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Electric Car</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <div class="panel-body">
+                                <div class="col-md-8 greenestOptText text-center">
+                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                        quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                                </div>
+                                <div id="containerResponsiveFour" class="col-md-2"></div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Ferry</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveFive" class="col-md-2"></div>                             
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Taxi</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body vendorBtnBody">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveSix" class="col-md-2"></div>                              
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default expandablePanelsContent">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <i class="fas fa-car"></i>
+                                <span class="fontSize">Car Sharing</span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="containerResponsiveSeven" class="col-md-2"></div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Responsive Landing Page -->
+        <div class="row greenTransportOptBG" id="landingPage">
             <div class="col-md-10 col-md-offset-1">
-                <p class="text-justify">
-                    <br><br><br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore illum reprehenderit id fugiat tempore distinctio laborum fugit commodi, temporibus reiciendis nulla numquam nam natus iste, itaque repellendus beatae illo
-                    rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum aliquam alias officiis ipsa, iusto vel hic recusandae optio eveniet. Ratione et quod saepe quisquam nisi dolores cumque aspernatur perferendis! Lorem ipsum dolor
-                    sit amet consectetur, adipisicing elit. Tempora odio eveniet sapiente explicabo blanditiis ab id! Obcaecati voluptatibus quaerat ratione consectetur, eum iste, architecto iure enim ducimus, a sint cum! Lorem, ipsum dolor sit amet consectetur
-                    adipisicing elit. Nihil, dolor quod enim aperiam neque officiis sed porro expedita voluptate laborum sunt tempore facilis inventore soluta perferendis, itaque repudiandae omnis eius!
-                    <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ab quibusdam sed. Dignissimos, rem! Vitae, molestias sit asperiores ipsam, quia minima iure voluptas quidem explicabo, vel eos dolor distinctio suscipit. Lorem
-                    ipsum dolor sit amet consectetur, adipisicing elit. Officiis, mollitia. Ducimus voluptatem blanditiis ea atque voluptate repudiandae laboriosam, provident deserunt quidem esse voluptates laudantium earum porro soluta, facere debitis!
-                    Error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit esse ipsa, vitae sed voluptas eaque magnam voluptatum iste quis aliquid illo, corporis, velit hic numquam dolore corrupti ex explicabo modi? Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Unde eos magnam possimus natus quibusdam fugit? Obcaecati, facere. Quam, fugit! Sequi illo obcaecati accusamus similique, mollitia odit dolorem veritatis consequatur asperiores?
-                    <br><br><br>
-                </p>
+                <div class="col-md-10 col-md-offset-1">
+                    <ul class="nav nav-tabs nav-justified" role="tablist" id="greenestTransportOpt">   
+                        <li role="presentation" class="active locTab greenTransportOptBG grTrOptHover">
+                            <a href="#busVendor" aria-controls="home" role="tab" data-toggle="tab" class="greenTransportOptBG grTrOptHover">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fa fa-bus fa-2x"></i>
+                                    <h4>Bus</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG grTrOptHover" id="bikeGreenestTranspprtOpt">
+                            <a href="#bikeVendor" aria-controls="bikeVendor" role="tab" data-toggle="tab" class="greenTransportOptBG grTrOptHover">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-motorcycle fa-2x"></i>
+                                    <h4>Bike</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG" id="cycleGreenestTranspprtOpt">
+                            <a href="#cycleVendor" aria-controls="cycleVendor" role="tab" data-toggle="tab" class="greenTransportOptBG">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-bicycle fa-2x"></i>
+                                </div>
+                                <div class="greenTransportOptBG">
+                                    <h4>Cycle</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG" id="elCarGreenestTranspprtOpt">
+                            <a href="#elestricCarVendor" aria-controls="elestricCarVendor" class="greenTransportOptBG" role="tab" data-toggle="tab">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-car fa-2x"></i>
+                                </div>
+                                <div class="greenTransportOptBG">
+                                    <h4>Electric Car</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG"  id="ferryGreenestTranspprtOpt">
+                            <a href="#ferryVendor" aria-controls="ferryVendor" class="greenTransportOptBG" role="tab" data-toggle="tab" >
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-ship fa-2x"></i>
+                                </div>
+                                <div class="greenTransportOptBG">
+                                    <h4>Ferry</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG" id="taxiGreenestTranspprtOpt">
+                            <a href="#taxiVendor" aria-controls="taxiVendor" role="tab" data-toggle="tab" class="greenTransportOptBG">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-car fa-2x"></i>
+                                </div>
+                                <div class="greenTransportOptBG">
+                                    <h4>Taxi</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="greenTransportOptBG" id="carShareGreenestTranspprtOpt">
+                            <a href="#carShareVendor" aria-controls="carShareVendor" role="tab" data-toggle="tab" class="greenTransportOptBG">
+                                <div class="faElements greenTransportOptBG">
+                                    <i class="fas fa-car fa-2x"></i>
+                                </div>
+                                <div class="greenTransportOptBG">
+                                    <h4>Car Sharing</h4>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- location Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active row greenTransportOptPanelBG tabPanelMarginBt" id="busVendor">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="container" class="col-md-2"></div>   
+                        </div>
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt" id="bikeVendor">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="container1" class="col-md-2"></div>
+                        </div>
+                          
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt col-md-12" id="cycleVendor">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="container2" class="col-md-2"></div>   
+                           
+                        </div>
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt" id="elestricCarVendor">
+                            <div class="col-md-8 greenestOptText text-center">
+                                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                    quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                            </div>
+                            <div id="container3" class="col-md-2"></div>   
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt" id="ferryVendor">
+                                <div class="col-md-8 greenestOptText text-center">
+                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                        quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                                </div>
+                                <div id="container4" class="col-md-2"></div>                                        
+                        </div>
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt" id="taxiVendor">
+                            
+                                <div class="col-md-8 greenestOptText text-center">
+                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                        quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                                </div>
+                                <div id="container5" class="col-md-2"></div>    
+                           
+                        </div>
+                        <div role="tabpanel" class="tab-pane row greenTransportOptPanelBG tabPanelMarginBt" id="carShareVendor">
+                            
+                                <div class="col-md-8 greenestOptText text-center">
+                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quasi magnam minima explicabo accusantium vero, 
+                                        quae nesciunt rerum sint delectus distinctio accusamus! Odio maiores dolor sapiente dolorem officia numquam assumenda!</h4>
+                                </div>
+                                <div id="container6" class="col-md-2"></div>    
+                           
+                        </div>
+                    </div>                   
+                </div>
             </div>
         </div>
         <div class="row footer" id="appLinks">
@@ -131,6 +405,7 @@
             </div>
         </div>
         <script src="js/app.js"></script>
+        <script src="js/greenestTransportOptions.js"></script>
 </body>
 
 </html>

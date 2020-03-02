@@ -50,23 +50,7 @@ const locTabs = document.querySelectorAll(".loctabs");
 const locTab = document.querySelectorAll(".locTab");
 const paNel = document.querySelectorAll(".paNel");
 
-// function tabClick(event) {
-//   // deactivate existing active tabs and panel
-//   for (let i = 0; i < locTab.length; i++) {
-//     locTab[i].classList.remove("active");
-//   }
-//   for (let i = 0; i < paNel.length; i++) {
-//     paNel[i].classList.remove("active");
-//   }
-//   // activate new tabs and panel
-//   event.target.classList.add('active');
-//   let classString = event.target.getAttribute('data-target');
-//   console.log(classString);
-//   document.getElementById('locPanels').getElementsByClassName(classString)[0].classList.add("active");
-// }
-// for (let i = 0; i < locTab.length; i++) {
-//   locTab[i].addEventListener('click', tabClick);
-// }
+
 // transport option animation
 function animateNavOutline(navHeight, navWidth, activeLeftX, activeRightX) {
 
@@ -363,96 +347,6 @@ $(document).ready(function() {
     });
 
 
-
-    // update user define fn below
-
-    // display vendor locations on map
-    $("#displayBusVendorBtn").click(function() {
-        event.preventDefault();
-
-        $.getJSON("https://mobilitas.fewgoodgeeks.com/wp-json/services/routes/", function(result) {
-            console.log(result);
-            $.each(result, function(i, field) {
-
-                var myObj = JSON.parse(i);
-                console.log(field.id);
-                var destinationLink = "https://mobilitas.fewgoodgeeks.com/wp-json/services/route/" + field.id;
-                console.log(destinationLink);
-                $.getJSON(destinationLink, function(result) {
-                    console.log("djsdhfjskdf", result);
-                });
-
-
-
-
-            });
-        });
-
-        // $.getJSON("https://mobilitas.fewgoodgeeks.com/wp-json/services/destination/1454", function(result){
-        // 	console.log(result);
-        // });
-
-
-
-
-    });
-
-    // send form
-   
-   
-    $("#submitBtn").click( function () { 
-        var valid;	
-        console.log("click");
-        // valid = validateContact();
-        // if(valid) {
-        //     jQuery.ajax({
-        //         url: "contact_mail.php",
-        //         data:'userName='+$("#userName").val()+'&userEmail='+
-        //         $("#userEmail").val()+'&subject='+
-        //         $("#subject").val()+'&content='+
-        //         $(content).val(),
-        //         type: "POST",
-        //         success:function(data){
-        //             $("#mail-status").html(data);
-        //         },
-        //         error:function (){}
-        //     });
-        // }
-    } );
-
-    function validateContact() {
-        var valid = true;	
-        $(".demoInputBox").css('background-color','');
-        $(".info").html('');
-        if(!$("#userName").val()) {
-            $("#userName-info").html("(required)");
-            $("#userName").css('background-color','#FFFFDF');
-            valid = false;
-        }
-        if(!$("#userEmail").val()) {
-            $("#userEmail-info").html("(required)");
-            $("#userEmail").css('background-color','#FFFFDF');
-            valid = false;
-        }
-        if(!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-            $("#userEmail-info").html("(invalid)");
-            $("#userEmail").css('background-color','#FFFFDF');
-            valid = false;
-        }
-        if(!$("#subject").val()) {
-            $("#subject-info").html("(required)");
-            $("#subject").css('background-color','#FFFFDF');
-            valid = false;
-        }
-        if(!$("#content").val()) {
-            $("#content-info").html("(required)");
-            $("#content").css('background-color','#FFFFDF');
-            valid = false;
-        }
-        return valid;
-    }
-
-
 });
 // token expire fn
 function addDays(date, days) {
@@ -460,3 +354,4 @@ function addDays(date, days) {
     result.setDate(result.getDate() + days);
     return result;
 }
+
