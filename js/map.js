@@ -133,6 +133,11 @@ $(document).ready(function () {
         showPinsByVendor("go-to");
     });
 
+    let maltaAirportTaxiButton = document.getElementById("taxi-map-button");
+    maltaAirportTaxiButton.addEventListener('click', function () {
+        showPinsByCategory("taxi-stop");
+    });
+
 });
 
 
