@@ -838,9 +838,9 @@
                     <div id="animate-second-vertical-location"></div>
                     <div id="animate-second-bottom-location"></div>
 
-                    <li role="presentation" class="active locTab">
+                    <li role="presentation" class="active locTab"  id="bus-map-button">
                         <a href="#busVendor" aria-controls="home" role="tab" data-toggle="tab">
-                            <div class="faElements">
+                            <div class="faElements"> 
                                 <i class="fa fa-bus fa-2x"></i>
                             </div>
                             <div>
@@ -848,7 +848,7 @@
                             </div>
                         </a>
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab" id="bike-map-button">
                         <a href="#bikeVendor" aria-controls="bikeVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-motorcycle fa-2x"></i>
@@ -858,7 +858,7 @@
                             </div>
                         </a>
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab"  id="cycle-map-button" >
                         <a href="#cycleVendor" aria-controls="cycleVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-bicycle fa-2x"></i>
@@ -868,7 +868,7 @@
                             </div>
                         </a>
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab"  id="electric-map-button">
                         <a href="#elestricCarVendor" aria-controls="elestricCarVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-car fa-2x"></i>
@@ -876,9 +876,9 @@
                             <div>
                                 <h4>Electric Car</h4>
                             </div>
-                        </a>
+                        </a> 
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab" id="ferry-map-button">
                         <a href="#ferryVendor" aria-controls="ferryVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-ship fa-2x"></i>
@@ -888,7 +888,7 @@
                             </div>
                         </a>
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab"  id="taxi-map-button">
                         <a href="#taxiVendor" aria-controls="taxiVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-car fa-2x"></i>
@@ -898,7 +898,7 @@
                             </div>
                         </a>
                     </li>
-                    <li role="presentation" class="locTab">
+                    <li role="presentation" class="locTab"  id="share-map-button">
                         <a href="#carShareVendor" aria-controls="carShareVendor" role="tab" data-toggle="tab">
                             <div class="faElements">
                                 <i class="fas fa-car fa-2x"></i>
@@ -913,46 +913,46 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="busVendor">
                         <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                            <li role="presentation" class="active"><a href="#busVendor" aria-controls="" role="tab" data-toggle="tab" id="displayBusVendorBtn">Public Transport Malta</a></li>
+                            <li role="presentation" class="active" id="public-bus-vendor-btn"><a href="#busVendor" aria-controls="" role="tab" data-toggle="tab" id="displayBusVendorBtn">Public Transport Malta</a></li>
                         </ul>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="bikeVendor">
                         <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                            <li role="presentation" class="active"><a href="#bikeVendor" aria-controls="" role="tab" data-toggle="tab">Public Transport Malta</a></li>
+                            <li role="presentation" class="active" id="public-bike-vendor-btn"><a href="#bikeVendor" aria-controls="" role="tab" data-toggle="tab">Public Transport Malta</a></li>
                         </ul>
                     </div>
                     <div role="tabpanel" class="tab-pane col-md-12" id="cycleVendor">
                         <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                            <li role="presentation" class="active"><a href="#vendor1" aria-controls="vendor1" role="tab" data-toggle="tab">Eco Bikes Malt</a></li>
-                            <li role="presentation" class=" "><a href="#vendor2" aria-controls="vendor2" role="tab" data-toggle="tab">Be Green</a></li>
+                            <li role="presentation" class="active" id="eco-cycle-vendor-btn"><a href="#vendor1" aria-controls="vendor1" role="tab" data-toggle="tab">Eco Bikes Malta</a></li>
+                            <li role="presentation" class=" " id="be-green-cycle-vendor-btn"><a href="#vendor2" aria-controls="vendor2" role="tab" data-toggle="tab">Be Green</a></li>
                         </ul>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="elestricCarVendor">
                         <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                            <li id="elCarVendorBt1" role="presentation" class="active"><a href="#vendor3" aria-controls="vendor3" role="tab" data-toggle="tab">Rooling Geeks</a></li>
-                            <li id="elCarVendorBtn2" role="presentation" class=" "><a href="#vendor4" aria-controls="vendor4" role="tab" data-toggle="tab">Smarter Car Rentals</a></li>
+                            <li id="rolling-geeks-vendor-btn" role="presentation" class="active"><a href="#vendor3" aria-controls="vendor3" role="tab" data-toggle="tab">Rolling Geeks</a></li>
+                            <li  id="smarter-car-vendor-btn" role="presentation" class=" "><a href="#vendor4" aria-controls="vendor4" role="tab" data-toggle="tab">Smarter Car Rentals</a></li>
                         </ul>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="ferryVendor">
                         <div role="tabpanel" class="tab-pane">
                             <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                                <li role="presentation" class="active ferryBtns"><a href="#vendor5" aria-controls="vendor5" role="tab" data-toggle="tab">Public Transport Malta</a></li>
-                                <li role="presentation" class="ferryBtns "><a href="#vendor6" aria-controls="vendor6" role="tab" data-toggle="tab">Gozo Channel</a></li>
-                                <li role="presentation" class="ferryBtns"><a href="#vendor7" aria-controls="vendor7" role="tab" data-toggle="tab">Vallet Ferry Service</a></li>
+                                <li  id="public-ferry-vendor-btn" role="presentation" class="active ferryBtns"><a href="#vendor5" aria-controls="vendor5" role="tab" data-toggle="tab">Public Transport Malta</a></li>
+                                <li  id="gozo-channel-ferry-vendor-btn" role="presentation" class="ferryBtns "><a href="#vendor6" aria-controls="vendor6" role="tab" data-toggle="tab">Gozo Channel</a></li>
+                                <li  id="valleta-ferry-vendor-btn" role="presentation" class="ferryBtns"><a href="#vendor7" aria-controls="vendor7" role="tab" data-toggle="tab">Valleta Ferry Service</a></li>
                             </ul>
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="taxiVendor">
                         <div role="tabpanel" class="tab-pane active">
                             <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                                <li role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Malta Airport</a></li>
+                                <li   id="airport-taxi-vendor-btn" role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Malta Airport</a></li>
                             </ul>
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="carShareVendor">
                         <ul class="nav nav-pills text-center vendorBtnsLocations" role="tablist">
-                            <li role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Bolt</a></li>
-                            <li role="presentation" class=""><a href="#vendor9" aria-controls="vendor9" role="tab" data-toggle="tab">Go To</a></li>
+                            <li id="bolt-share-vendor-btn" role="presentation" class="active"><a href="#vendor8" aria-controls="vendor8" role="tab" data-toggle="tab">Bolt</a></li>
+                            <li  id="goto-share-vendor-btn" role="presentation" class=""><a href="#vendor9" aria-controls="vendor9" role="tab" data-toggle="tab">Go To</a></li>
                         </ul>
                     </div>
                 </div>
@@ -992,7 +992,10 @@
         </div>
     </div>
     <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYI5Y7DX8jODIxFV8dsk1ShmBiNeVQyYA&callback=myMap"></script>
+
 
 </body>
 

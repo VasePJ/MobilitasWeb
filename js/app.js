@@ -287,7 +287,7 @@ function animateNavOutlineLocation(navHeight, navWidth, activeLeftX, activeRight
 
     }
 }
-$(document).ready(function() {
+$(document).ready(function() {$
     // show and hide logged in user
     var token = $.cookie("token");
     if (Boolean(token) && token != "null") {
