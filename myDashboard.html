@@ -43,8 +43,6 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Profile
                             <i class="fas fa-user"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="changePassword.html">Change Password</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="index.html">Home</a></li>
                             <li role="separator" class="divider"></li>
                             <li id="logOutUser"><a href="#">Log Out</a></li>
@@ -71,7 +69,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="row">
                     <div class="col-md-8">
-                        <h5 class="myLocationHeaderBordrer">My Locations</h5>
+                        <h5 class="myLocationHeaderBordrer">My Saved Locations</h5>
                     </div>
                 </div>
             </div>
@@ -79,57 +77,19 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="row dashBoardWrapper">
-                    <div class="col-md-8">
-                        <div class="expandableLocation">
+                    <div id="locations-container" class="col-md-8">
+
+                        <!-- <div class="expandableLocation">
                             <button class="text-left expandLocationBtn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                     Location 1
-                                </button>
+                            </button>
                             <div class="collapse" id="collapseExample">
                                 <div class="expandedText">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sunt assumenda dolores quo impedit mollitia obcaecati qui voluptatum ducimus tenetur saepe, ad, deserunt voluptatem unde libero, quidem laboriosam sed? Voluptatum!
                                 </div>
                             </div>
-                        </div>
-                        <div class="expandableLocation">
-                            <button class="text-left expandLocationBtn" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-                                    Location 1
-                                </button>
-                            <div class="collapse" id="collapseExample1">
-                                <div class="expandedText">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sunt assumenda dolores quo impedit mollitia obcaecati qui voluptatum ducimus tenetur saepe, ad, deserunt voluptatem unde libero, quidem laboriosam sed? Voluptatum!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expandableLocation">
-                            <button class="text-left expandLocationBtn" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                                    Location 1
-                                </button>
-                            <div class="collapse" id="collapseExample2">
-                                <div class="expandedText">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sunt assumenda dolores quo impedit mollitia obcaecati qui voluptatum ducimus tenetur saepe, ad, deserunt voluptatem unde libero, quidem laboriosam sed? Voluptatum!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expandableLocation">
-                            <button class="text-left expandLocationBtn" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    Location 1
-                                </button>
-                            <div class="collapse" id="collapseExample3">
-                                <div class="expandedText">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sunt assumenda dolores quo impedit mollitia obcaecati qui voluptatum ducimus tenetur saepe, ad, deserunt voluptatem unde libero, quidem laboriosam sed? Voluptatum!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expandableLocation">
-                            <button class="text-left expandLocationBtn" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
-                                    Location 1
-                                </button>
-                            <div class="collapse" id="collapseExample4">
-                                <div class="expandedText">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sunt assumenda dolores quo impedit mollitia obcaecati qui voluptatum ducimus tenetur saepe, ad, deserunt voluptatem unde libero, quidem laboriosam sed? Voluptatum!
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
+                        
                     </div>
                     <div class="col-md-4">
                         <div class="userImgDashboard">
@@ -176,7 +136,8 @@
         </div>
     </div>
     <script src="js/app.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYI5Y7DX8jODIxFV8dsk1ShmBiNeVQyYA&callback=myMap"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYI5Y7DX8jODIxFV8dsk1ShmBiNeVQyYA&callback=myMap"></script>
 
 </body>
 

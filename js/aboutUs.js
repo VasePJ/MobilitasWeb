@@ -1,5 +1,13 @@
 $(document).ready(function () {
-
+    // show and hide logged in user
+    var token = $.cookie("token");
+    if (Boolean(token) && token != "null") {
+        $('#logIn').hide();
+        $('#aboutUsLoggedInUser').show();
+    } else {
+        $('#logIn').show();
+        $('#aboutUsLoggedInUser').hide();
+    }
 
     $("#submitBtn").click(function () {
         var valid;	

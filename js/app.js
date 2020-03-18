@@ -326,7 +326,6 @@ $(document).ready(function() {$
                 data: { username: username, password: password },
                 success: function(response) {
                     if (Boolean(response)) {
-                        console.log('success response', response);
                         $.cookie('token', response.token, { expires: 7, path: '/' });
                         $.cookie('email', response.user_email, { expires: 7, path: '/' });
                         window.location = "myDashboard.html";
@@ -334,7 +333,6 @@ $(document).ready(function() {$
                 },
                 error: function(response) {
                     if (Boolean(response)) {
-                        console.log('error response', response);
                         $('#wrongUserOrPass').show();
                         $('#wrongUserOrPass').text('Wrong username or password! Please try again.');
                     }
@@ -354,4 +352,5 @@ function addDays(date, days) {
     result.setDate(result.getDate() + days);
     return result;
 }
+
 

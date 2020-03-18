@@ -706,6 +706,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    #aboutUsLoggedInUser{
+        display: none!important;
+    }
     
     #passwordInput {
         width: 323px;
@@ -756,6 +759,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+   
     .gtoResponsiveTabs{
         margin: 0 auto;
     }
@@ -795,15 +799,21 @@ body {
     .editProfileRow {
         height: 35em;
     }
+
+
 }
 
 @media only screen and (max-width: 425px) {
+   #logIn {
+        display: none!important;
+    }
     .copyRightsFontSize {
         font-size: 13px;
     }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 767px) {
+ 
     #landingPage {
         display: none;
     }

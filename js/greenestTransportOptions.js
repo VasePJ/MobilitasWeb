@@ -1,5 +1,17 @@
 $(document).ready(function() {
     
+  // show and hide logged in user
+  var token = $.cookie("token");
+  if (Boolean(token) && token != "null") {
+    $('#logIn').hide();
+    $('#aboutUsLoggedInUser').show();
+  } else {
+    $('#logIn').show();
+    $('#aboutUsLoggedInUser').hide();
+  }
+
+
+
 // progress
 var bar = new ProgressBar.Circle(container, {
     color: '#aaa',
