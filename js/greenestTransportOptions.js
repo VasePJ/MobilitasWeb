@@ -43,7 +43,7 @@ var bar = new ProgressBar.Circle(container, {
 bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 bar.text.style.fontSize = '2rem';
 
-bar.animate(0.63);  // Number from 0.0 to 1.0
+bar.animate(0.55);  // Number from 0.0 to 1.0
 
 // second tab animation
 var secondAnimation = new ProgressBar.Circle("#container1", {
@@ -108,7 +108,7 @@ var thirdAnimation = new ProgressBar.Circle("#container2", {
 thirdAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 thirdAnimation.text.style.fontSize = '2rem';
 $("#cycleGreenestTranspprtOpt").click(function(){
-    thirdAnimation.animate(0.70);
+    thirdAnimation.animate(0.97);
 });
 
 // fourth animation
@@ -145,37 +145,37 @@ $("#elCarGreenestTranspprtOpt").click(function(){
 });
 
 // fifth animation
-var fifthAnimation = new ProgressBar.Circle("#container4", {
-    color: '#aaa',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 4,
-    trailWidth: 1,
-    easing: 'easeInOut',
-    duration: 1400,
-    text: {
-      autoStyleContainer: false
-    },
-    from: { color: '#aaa', width: 1 },
-    to: { color: '#006622', width: 4 },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-      circle.path.setAttribute('stroke-width', state.width);
+// var fifthAnimation = new ProgressBar.Circle("#container4", {
+//     color: '#aaa',
+//     // This has to be the same size as the maximum width to
+//     // prevent clipping
+//     strokeWidth: 4,
+//     trailWidth: 1,
+//     easing: 'easeInOut',
+//     duration: 1400,
+//     text: {
+//       autoStyleContainer: false
+//     },
+//     from: { color: '#aaa', width: 1 },
+//     to: { color: '#006622', width: 4 },
+//     // Set default step function for all animate calls
+//     step: function(state, circle) {
+//       circle.path.setAttribute('stroke', state.color);
+//       circle.path.setAttribute('stroke-width', state.width);
   
-      var value = Math.round(circle.value() * 100);
-      if (value === 0) {
-        circle.setText('');
-      } else {
-        circle.setText(value);
-      }
-    }})
+//       var value = Math.round(circle.value() * 100);
+//       if (value === 0) {
+//         circle.setText('');
+//       } else {
+//         circle.setText(value);
+//       }
+//     }})
   
-    fifthAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    fifthAnimation.text.style.fontSize = '2rem';
-    $("#ferryGreenestTranspprtOpt").click(function(){
-        fifthAnimation.animate(0.70);
-    });
+//     fifthAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+//     fifthAnimation.text.style.fontSize = '2rem';
+//     $("#ferryGreenestTranspprtOpt").click(function(){
+//         fifthAnimation.animate(0.70);
+//     });
     
 
 

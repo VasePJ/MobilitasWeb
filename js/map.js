@@ -8,7 +8,7 @@ $(document).ready(function () {
     function initMap() {
         var myLatLng = { lat: 35.8984976, lng: 14.5044102 };
         map = new google.maps.Map(document.getElementById('googleMap'), {
-            zoom: 10,
+            zoom: 11,
             center: myLatLng,
         });
     }

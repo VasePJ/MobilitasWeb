@@ -30,7 +30,7 @@ let buttons = document.getElementsByTagName('button');
 function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(51.508742, -0.120850),
-        zoom: 5,
+        zoom: 11,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
@@ -154,10 +154,8 @@ function animateNavOutline(navHeight, navWidth, activeLeftX, activeRightX) {
                 clearInterval(id);
                 break;
         }
-
     }
 }
-
 // Location tab animation
 function onTabClickLocation(event) {
     setTimeout(() => {
