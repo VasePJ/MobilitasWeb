@@ -1,33 +1,26 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
-
 .navbar {
     background-color: #f7f7f7;
 }
-
 #navbarColapse {
     color: #10458c;
 }
-
 #burgerMenuBtn {
     color: black;
 }
-
 #navbarBGC {
     background-color: white;
 }
-
 #logo img {
     width: 6em;
     margin-left: 35px;
 }
-
 #bs-example-navbar-collapse-1 {
     margin-top: 12px;
     margin-right: 15px;
 }
-
 #wrongUserOrPass {
     display: none;
     margin-top: -15px;
@@ -35,7 +28,6 @@ body {
     margin-bottom: 15px;
     color: red;
 }
-
 #heroImage {
     background-image: url('../img/cyclist-4546766_1920.jpg');
     height: 70vh;
@@ -44,24 +36,20 @@ body {
     position: relative;
     background-size: cover;
 }
-
 .headerText {
     margin-top: 50px;
     color: #10458c;
     font-size: bolder;
 }
-
 .tabHeader {
     color: #10458c;
     font-size: bolder;
     margin-top: 0;
     margin-left: 15px;
 }
-
 .tab-pane {
     margin-top: 50px;
 }
-
 .nav-tabs {
     margin-top: 50px;
     position: relative;
@@ -83,8 +71,6 @@ body {
     border-radius: 0;
     border-bottom: none;
 }
-
-
 .nav-tabs.nav-justified>li>a {
     border-radius: 0;
     border-bottom: 1px solid #fbbe00;
@@ -100,14 +86,12 @@ body {
     border: 1px solid #fbbe00;
     border-bottom-color: transparent;
 }
-
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
     color: black;
     background-color: #fbbe00;
 }
-
 .nav-pills>li {
     width: 170px;
     height: 40px;
@@ -115,23 +99,19 @@ body {
     background-color: #fbbe00;
     margin-bottom: 30px;
 }
-
 .ferryBtns a {
     font-size: small;
 }
-
 .nav-pills>li>a:hover {
     color: black;
     background-color: #b68d13;
 }
-
 .vendorBtns {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
 .vendorBtnsLocations {
     display: flex;
     flex-direction: row;
@@ -146,48 +126,49 @@ body {
 .nav>li>a {
     color: #10458c;
 }
-
 .testRow {
     display: block;
     margin-top: 50px;
 }
-
 #googleMap {
     height: 35em;
 }
-
 .footer {
     background-color: #10458c;
     color: white;
     padding: 15px;
 }
-
 .footerWrapper {
     margin-top: 25px;
 }
-
 .images {
     display: inline-block;
     margin: 0 auto;
 }
-
 .appsWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 15px;
 }
-
 .colapsablePanelsrcImg {
     width: 100px;
 }
-
 .copyRights {
     background-color: #15488a;
     color: white;
     border-top: 1px solid #1b1464;
 }
-
+.tOs{
+    color: white;
+}
+.tOs a:link {
+  text-decoration: none;
+}
+.tOs:hover {
+  color: white;
+  text-decoration: none;
+}
 .aboutUsWrapper {
     display: block;
     margin: 0 auto;
@@ -196,13 +177,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%)
 }
-
 .contactUs {
     margin-bottom: 55px;
     font-weight: bolder;
     color: #15488a;
 }
-
 #submitBtn {
     display: block;
     margin: 0 auto;
@@ -212,12 +191,10 @@ body {
     width: 7em;
     border: 1px solid #04316b;
 }
-
 #submitBtn:hover {
     background-color: #2562ac;
     border: 1px solid #133b70;
 }
-
 #logInForm {
     width: 25em;
     height: 100%;
@@ -225,26 +202,21 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 #logInFormWrapper {
     background-color: #f7f7f7!important;
 }
-
 .heroImageText {
     color: white;
 }
-
 .transporOptHeader,
 .logIntextStyle {
     color: #15488a;
     font-weight: bold;
 }
-
 .transporOptHeader {
     height: 3em;
     font-weight: bolder;
 }
-
 .logInBtn {
     background-color: #15488a;
     color: white;
@@ -252,48 +224,39 @@ body {
     width: 100px;
     height: 40px;
 }
-
 #editProfileDropdown {
     color: #15488a;
 }
-
 .editProfileText {
     color: #15488a;
     font-weight: bolder;
     margin-top: 35px;
 }
-
 #myDashBoard {
     background-color: #15488a;
     color: white;
     height: 2.5em;
 }
-
 .myDashboardHeader {
     font-weight: bolder;
     color: #15488a;
     text-align: left;
     margin-top: 35px;
 }
-
 .dashBoardFav {
     margin-top: 7px;
 }
-
 #expandableLocations {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
 .expandableLocation {
     margin-bottom: 15px;
 }
-
 .myLocationHeaderBordrer {
     border-bottom: 2px solid green;
     padding: 10px;
 }
-
 .expandLocationBtn {
     width: 100%;
     height: 3em;
@@ -302,13 +265,11 @@ body {
     color: #10458c;
     padding-left: 15px;
 }
-
 .userImgIcon {
     background-color: #bdb8b8;
     color: white;
     margin: 0 auto;
 }
-
 .userImgBtn {
     background-color: #15488a;
     color: white;
@@ -317,12 +278,10 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .dashBoardWrapper {
     padding-top: 15px;
     padding-bottom: 50px;
 }
-
 .userImageWrap {
     border: 1px solid #15488a;
     width: 100%;
@@ -331,57 +290,45 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 .userImgDashboard {
     margin-top: 0;
 }
-
 .myDashboardWrapper {
     height: 35em;
 }
-
 .textSeparator {
     margin-top: 25px;
 }
-
 .editUserImg {
     vertical-align: middle;
     width: 120px;
     border-radius: 50%;
 }
-
 .userImageWrapper {
     margin-top: 25px;
 }
-
 #dashboardNav {
     background-color: white;
 }
-
 .userImageRow {
     height: 15em;
     background-color: #f7f7f7;
 }
-
 .checkbox {
     margin-left: 95px;
 }
-
 .formWrapper {
     margin-top: 20px;
     margin-bottom: 40px;
 }
-
 .formElement {
     margin-top: 15px;
 }
-
 .editProfileRow {
     height: 27em;
     max-width: 1100px;
     margin: 0 auto;
 }
-
 #sendBtn {
     background-color: #15488a;
     color: white;
@@ -391,7 +338,6 @@ body {
     margin: 0 auto;
     margin-top: 25px;
 }
-
 .changePassBtn {
     background-color: #15488a;
     color: white;
@@ -400,30 +346,24 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
 .changePassBtnWrapp {
     margin-top: 25px;
 }
-
 .changePassRow {
     height: 25em;
 }
-
 .changePassRowWrapper {
     margin-top: 40px;
 }
-
 .changePassHeadre {
     color: #04316b;
     font-weight: bolder;
     padding: 15px;
     margin-top: 25px;
 }
-
 .transport-options-nav {
     position: relative;
 }
-
 #animate-first-bottom {
     width: 0;
     height: 2px;
@@ -431,35 +371,30 @@ body {
     background-color: #fbbe00;
     left: 0;
 }
-
 #animate-first-vertical {
     width: 2px;
     height: 0;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-top {
     width: 0;
     height: 2px;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-second-vertical {
     width: 2px;
     height: 0;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-second-bottom {
     width: 0;
     height: 2px;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-first-bottom-location {
     width: 0;
     height: 2px;
@@ -467,60 +402,52 @@ body {
     background-color: #fbbe00;
     left: 0;
 }
-
 #animate-first-vertical-location {
     width: 2px;
     height: 0;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-top-location {
     width: 0;
     height: 2px;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-second-vertical-location {
     width: 2px;
     height: 0;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #animate-second-bottom-location {
     width: 0;
     height: 2px;
     position: absolute;
     background-color: #fbbe00;
 }
-
 #passwordInput {
     width: 262px;
     margin: 0 auto;
 }
-
 /* progress  */
-
-#container, #container1, #container2, #container3, #container4, #container5, #container6,#containerResponsiveOne, #containerResponsiveTwo, #containerResponsiveThree, #containerResponsiveFour, #containerResponsiveFive, #containerResponsiveSix, #containerResponsiveSeven{
+#container, #container1, #container2, #container3, 
+#container4, #container5, #container6,#containerResponsiveOne,
+#containerResponsiveTwo, #containerResponsiveThree, #containerResponsiveFour,
+#containerResponsiveFive, #containerResponsiveSix, #containerResponsiveSeven {
     margin-top: 25px;
     width: 200px;
     height: 200px;
     position: relative;
-  }
- .greenestOptText{
+}
+.greenestOptText{
       margin-top: 40px;
   }
-
 .greenTransportOptBG{
-    background-color: whitesmoke!important;
-    
+    background-color: whitesmoke!important;   
 }
-
 .greenTransportOptPanelBG{
-    background-color: white;
-   
+    background-color: white;  
 }
 .tabPanelMarginBt{
     margin-bottom: 55px;
@@ -532,11 +459,8 @@ body {
     width: fit-content;
     font-weight: bold;
 }
-
 /* Responsive */
-
 /* Landing page  */
-
 @media only screen and (max-width: 480px) {
     .fontSize {
         font-size: 14px;
@@ -700,24 +624,18 @@ body {
     }
     #containerResponsiveOne, #containerResponsiveTwo, #containerResponsiveThree{
         margin: 0 auto;
-    }
-   
+    } 
 }
-
 @media (max-width: 768px) {
     #aboutUsLoggedInUser{
         display: none!important;
     }
-    
     #passwordInput {
         width: 323px;
         margin: 0 auto;
     }
     #logInFormWrapper {
         margin-right: -30px;
-    }
-    .nav.navbar-nav.navbar-right>li>a {
-        /* font-size: 12px; */
     }
     .nav.navbar-nav.navbar-right {
         margin-right: 0;
@@ -756,13 +674,10 @@ body {
         margin: 0 auto;
     }
 }
-
-@media only screen and (min-width: 768px) {
-   
+@media only screen and (min-width: 768px) { 
     .gtoResponsiveTabs{
         margin: 0 auto;
     }
-   
     .paNel.active {
         margin-top: 30px;
         display: block;
@@ -798,10 +713,7 @@ body {
     .editProfileRow {
         height: 35em;
     }
-
-
 }
-
 @media only screen and (max-width: 425px) {
    #logIn {
         display: none!important;
@@ -810,9 +722,7 @@ body {
         font-size: 13px;
     }
 }
-
 @media only screen and (min-width: 426px) and (max-width: 767px) {
- 
     #landingPage {
         display: none;
     }

@@ -49,8 +49,6 @@ for (let i = 0; i < vendorBtn.length; i++) {
 const locTabs = document.querySelectorAll(".loctabs");
 const locTab = document.querySelectorAll(".locTab");
 const paNel = document.querySelectorAll(".paNel");
-
-
 // transport option animation
 function animateNavOutline(navHeight, navWidth, activeLeftX, activeRightX) {
 
@@ -180,7 +178,6 @@ function onTabClickLocation(event) {
 for (let i = 0; i < locTab.length; i++) {
     locTab[i].addEventListener('click', onTabClickLocation);
 }
-
 function animateNavOutlineLocation(navHeight, navWidth, activeLeftX, activeRightX) {
 
     const activeBottomY = 0;
@@ -342,6 +339,18 @@ $(document).ready(function() {$
 
     });
 
+    // get texts
+    $.ajax({
+        type: 'GET',
+        url: 'https://mobilitas.fewgoodgeeks.com/wp-json/services/get-texts',
+        data: { get_param: 'value' },
+        dataType: 'json',
+        success: function (data) {
+            $('.privacy').append(data.privacy_policy);
+            $('.terms').append(data.terms_and_conditions);
+            $('.aboutUsText').append(data.about_us_text);
+        }
+    });
 
 });
 // token expire fn
