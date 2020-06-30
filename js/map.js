@@ -65,20 +65,20 @@ $(document).ready(function () {
         showPinsByCategory("bus-stop");
     });
 
-    let bikeMapButton = document.getElementById("bike-map-button");
-    bikeMapButton.addEventListener('click', function(){
-        showPinsByCategory("bike-stop");
-    });
+    // let bikeMapButton = document.getElementById("bike-map-button");
+    // bikeMapButton.addEventListener('click', function(){
+    //     showPinsByCategory("bike-stop");
+    // });
 
     let ferryMapButton = document.getElementById("ferry-map-button");
     ferryMapButton.addEventListener('click', function(){
         showPinsByCategory("ferry-stop");
     });
 
-    let publicFerryVendorButton = document.getElementById("public-ferry-vendor-btn");
-    publicFerryVendorButton.addEventListener('click', function () {
-        showPinsByVendor("public-transport-malta");
-    });
+    // let publicFerryVendorButton = document.getElementById("public-ferry-vendor-btn");
+    // publicFerryVendorButton.addEventListener('click', function () {
+    //     showPinsByVendor("public-transport-malta");
+    // });
 
     let gozoChannelFerryButton = document.getElementById("gozo-channel-ferry-vendor-btn");
     gozoChannelFerryButton.addEventListener('click', function () {
@@ -136,6 +136,11 @@ $(document).ready(function () {
     let maltaAirportTaxiButton = document.getElementById("taxi-map-button");
     maltaAirportTaxiButton.addEventListener('click', function () {
         showPinsByCategory("taxi-stop");
+    });
+
+    let airportTaxiVendorButton = document.getElementById("airport-taxi-vendor-btn");
+    airportTaxiVendorButton.addEventListener('click', function () {
+        showPinsByVendor("malta-airport");
     });
 
 });

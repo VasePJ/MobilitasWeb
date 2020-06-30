@@ -10,8 +10,6 @@ $(document).ready(function() {
     $('#aboutUsLoggedInUser').hide();
   }
 
-
-
 // progress
 var bar = new ProgressBar.Circle(container, {
     color: '#aaa',
@@ -81,8 +79,6 @@ $("#bikeGreenestTranspprtOpt").click(function(){
 // third animation
 var thirdAnimation = new ProgressBar.Circle("#container2", {
   color: '#aaa',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
   strokeWidth: 4,
   trailWidth: 1,
   easing: 'easeInOut',
@@ -92,7 +88,6 @@ var thirdAnimation = new ProgressBar.Circle("#container2", {
   },
   from: { color: '#aaa', width: 1 },
   to: { color: '#006622', width: 4 },
-  // Set default step function for all animate calls
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
@@ -114,8 +109,6 @@ $("#cycleGreenestTranspprtOpt").click(function(){
 // fourth animation
 var fourthAnimation = new ProgressBar.Circle("#container3", {
     color: '#aaa',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
     strokeWidth: 4,
     trailWidth: 1,
     easing: 'easeInOut',
@@ -125,7 +118,6 @@ var fourthAnimation = new ProgressBar.Circle("#container3", {
     },
     from: { color: '#aaa', width: 1 },
     to: { color: '#006622', width: 4 },
-    // Set default step function for all animate calls
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
@@ -144,44 +136,7 @@ $("#elCarGreenestTranspprtOpt").click(function(){
     fourthAnimation.animate(0.70);
 });
 
-// fifth animation
-// var fifthAnimation = new ProgressBar.Circle("#container4", {
-//     color: '#aaa',
-//     // This has to be the same size as the maximum width to
-//     // prevent clipping
-//     strokeWidth: 4,
-//     trailWidth: 1,
-//     easing: 'easeInOut',
-//     duration: 1400,
-//     text: {
-//       autoStyleContainer: false
-//     },
-//     from: { color: '#aaa', width: 1 },
-//     to: { color: '#006622', width: 4 },
-//     // Set default step function for all animate calls
-//     step: function(state, circle) {
-//       circle.path.setAttribute('stroke', state.color);
-//       circle.path.setAttribute('stroke-width', state.width);
-  
-//       var value = Math.round(circle.value() * 100);
-//       if (value === 0) {
-//         circle.setText('');
-//       } else {
-//         circle.setText(value);
-//       }
-//     }})
-  
-//     fifthAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-//     fifthAnimation.text.style.fontSize = '2rem';
-//     $("#ferryGreenestTranspprtOpt").click(function(){
-//         fifthAnimation.animate(0.70);
-//     });
-    
-
-
     // sixt animation
-
-
     var sixtAnimation = new ProgressBar.Circle("#container5", {
         color: '#aaa',
         // This has to be the same size as the maximum width to
@@ -217,8 +172,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
     // seventh animation
     var seventhAnimation = new ProgressBar.Circle("#container6", {
         color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
         strokeWidth: 4,
         trailWidth: 1,
         easing: 'easeInOut',
@@ -228,7 +181,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         },
         from: { color: '#aaa', width: 1 },
         to: { color: '#006622', width: 4 },
-        // Set default step function for all animate calls
         step: function(state, circle) {
           circle.path.setAttribute('stroke', state.color);
           circle.path.setAttribute('stroke-width', state.width);
@@ -246,12 +198,10 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         $("#carShareGreenestTranspprtOpt").click(function(){
             seventhAnimation.animate(0.70);
         });
-//  responsive animations
+    //  responsive animations
     // eight animation
     var eightAnimation = new ProgressBar.Circle("#containerResponsiveOne", {
         color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
         strokeWidth: 4,
         trailWidth: 1,
         easing: 'easeInOut',
@@ -261,7 +211,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         },
         from: { color: '#aaa', width: 1 },
         to: { color: '#006622', width: 4 },
-        // Set default step function for all animate calls
         step: function(state, circle) {
           circle.path.setAttribute('stroke', state.color);
           circle.path.setAttribute('stroke-width', state.width);
@@ -283,8 +232,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
     // ninth animation
     var ninthAnimation = new ProgressBar.Circle("#containerResponsiveTwo", {
         color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
         strokeWidth: 4,
         trailWidth: 1,
         easing: 'easeInOut',
@@ -294,11 +241,9 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         },
         from: { color: '#aaa', width: 1 },
         to: { color: '#006622', width: 4 },
-        // Set default step function for all animate calls
         step: function(state, circle) {
           circle.path.setAttribute('stroke', state.color);
-          circle.path.setAttribute('stroke-width', state.width);
-      
+          circle.path.setAttribute('stroke-width', state.width);     
           var value = Math.round(circle.value() * 100);
           if (value === 0) {
             circle.setText('');
@@ -315,8 +260,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         // tenth animation
         var tenthAnimation = new ProgressBar.Circle("#containerResponsiveThree", {
             color: '#aaa',
-            // This has to be the same size as the maximum width to
-            // prevent clipping
             strokeWidth: 4,
             trailWidth: 1,
             easing: 'easeInOut',
@@ -326,7 +269,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             },
             from: { color: '#aaa', width: 1 },
             to: { color: '#006622', width: 4 },
-            // Set default step function for all animate calls
             step: function(state, circle) {
               circle.path.setAttribute('stroke', state.color);
               circle.path.setAttribute('stroke-width', state.width);
@@ -347,8 +289,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         // animation eleven
         var elevenAnimation = new ProgressBar.Circle("#containerResponsiveFour", {
             color: '#aaa',
-            // This has to be the same size as the maximum width to
-            // prevent clipping
             strokeWidth: 4,
             trailWidth: 1,
             easing: 'easeInOut',
@@ -358,7 +298,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             },
             from: { color: '#aaa', width: 1 },
             to: { color: '#006622', width: 4 },
-            // Set default step function for all animate calls
             step: function(state, circle) {
               circle.path.setAttribute('stroke', state.color);
               circle.path.setAttribute('stroke-width', state.width);
@@ -380,8 +319,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         // animation twelve 
         var twelveAnimation = new ProgressBar.Circle("#containerResponsiveFive", {
             color: '#aaa',
-            // This has to be the same size as the maximum width to
-            // prevent clipping
             strokeWidth: 4,
             trailWidth: 1,
             easing: 'easeInOut',
@@ -391,7 +328,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             },
             from: { color: '#aaa', width: 1 },
             to: { color: '#006622', width: 4 },
-            // Set default step function for all animate calls
             step: function(state, circle) {
               circle.path.setAttribute('stroke', state.color);
               circle.path.setAttribute('stroke-width', state.width);
@@ -414,8 +350,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
 
         var thirteenAnimation = new ProgressBar.Circle("#containerResponsiveSix", {
             color: '#aaa',
-            // This has to be the same size as the maximum width to
-            // prevent clipping
             strokeWidth: 4,
             trailWidth: 1,
             easing: 'easeInOut',
@@ -425,11 +359,9 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             },
             from: { color: '#aaa', width: 1 },
             to: { color: '#006622', width: 4 },
-            // Set default step function for all animate calls
             step: function(state, circle) {
               circle.path.setAttribute('stroke', state.color);
-              circle.path.setAttribute('stroke-width', state.width);
-          
+              circle.path.setAttribute('stroke-width', state.width);        
               var value = Math.round(circle.value() * 100);
               if (value === 0) {
                 circle.setText('');
@@ -448,8 +380,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
 
         var fourtheenAnimation = new ProgressBar.Circle("#containerResponsiveSeven", {
             color: '#aaa',
-            // This has to be the same size as the maximum width to
-            // prevent clipping
             strokeWidth: 4,
             trailWidth: 1,
             easing: 'easeInOut',
@@ -459,11 +389,9 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             },
             from: { color: '#aaa', width: 1 },
             to: { color: '#006622', width: 4 },
-            // Set default step function for all animate calls
             step: function(state, circle) {
               circle.path.setAttribute('stroke', state.color);
-              circle.path.setAttribute('stroke-width', state.width);
-          
+              circle.path.setAttribute('stroke-width', state.width);         
               var value = Math.round(circle.value() * 100);
               if (value === 0) {
                 circle.setText('');

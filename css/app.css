@@ -16,6 +16,7 @@ body {
 #logo img {
     width: 6em;
     margin-left: 35px;
+    margin-top: -10px;
 }
 #bs-example-navbar-collapse-1 {
     margin-top: 12px;
@@ -93,15 +94,13 @@ body {
     background-color: #fbbe00;
 }
 .nav-pills>li {
-    width: 170px;
-    height: 40px;
+    max-width: 200px;
+    max-height: 50px;
     color: black;
     background-color: #fbbe00;
     margin-bottom: 30px;
 }
-.ferryBtns a {
-    font-size: small;
-}
+
 .nav-pills>li>a:hover {
     color: black;
     background-color: #b68d13;
@@ -149,7 +148,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15px;
 }
 .colapsablePanelsrcImg {
     width: 100px;
@@ -457,6 +455,10 @@ body {
     margin: 0 auto;
     display: block;
     width: fit-content;
+    font-weight: bold;
+}
+.btnEdits{
+    font-size: 18px;
     font-weight: bold;
 }
 /* Responsive */
