@@ -230,30 +230,30 @@ $("#elCarGreenestTranspprtOpt").click(function(){
         });
 
     // ninth animation
-    var ninthAnimation = new ProgressBar.Circle("#containerResponsiveTwo", {
-        color: '#aaa',
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-          autoStyleContainer: false
-        },
-        from: { color: '#aaa', width: 1 },
-        to: { color: '#006622', width: 4 },
-        step: function(state, circle) {
-          circle.path.setAttribute('stroke', state.color);
-          circle.path.setAttribute('stroke-width', state.width);     
-          var value = Math.round(circle.value() * 100);
-          if (value === 0) {
-            circle.setText('');
-          } else {
-            circle.setText(value);
-          }
-        }})
+    // var ninthAnimation = new ProgressBar.Circle("#containerResponsiveTwo", {
+    //     color: '#aaa',
+    //     strokeWidth: 4,
+    //     trailWidth: 1,
+    //     easing: 'easeInOut',
+    //     duration: 1400,
+    //     text: {
+    //       autoStyleContainer: false
+    //     },
+    //     from: { color: '#aaa', width: 1 },
+    //     to: { color: '#006622', width: 4 },
+    //     step: function(state, circle) {
+    //       circle.path.setAttribute('stroke', state.color);
+    //       circle.path.setAttribute('stroke-width', state.width);     
+    //       var value = Math.round(circle.value() * 100);
+    //       if (value === 0) {
+    //         circle.setText('');
+    //       } else {
+    //         circle.setText(value);
+    //       }
+    //     }})
       
-        ninthAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        ninthAnimation.text.style.fontSize = '2rem';
+        // ninthAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+        // ninthAnimation.text.style.fontSize = '2rem';
         $("#headingTwo").click(function(){
             ninthAnimation.animate(0.70);
         });
@@ -317,31 +317,31 @@ $("#elCarGreenestTranspprtOpt").click(function(){
             });
 
         // animation twelve 
-        var twelveAnimation = new ProgressBar.Circle("#containerResponsiveFive", {
-            color: '#aaa',
-            strokeWidth: 4,
-            trailWidth: 1,
-            easing: 'easeInOut',
-            duration: 1400,
-            text: {
-              autoStyleContainer: false
-            },
-            from: { color: '#aaa', width: 1 },
-            to: { color: '#006622', width: 4 },
-            step: function(state, circle) {
-              circle.path.setAttribute('stroke', state.color);
-              circle.path.setAttribute('stroke-width', state.width);
+        // var twelveAnimation = new ProgressBar.Circle("#containerResponsiveFive", {
+        //     color: '#aaa',
+        //     strokeWidth: 4,
+        //     trailWidth: 1,
+        //     easing: 'easeInOut',
+        //     duration: 1400,
+        //     text: {
+        //       autoStyleContainer: false
+        //     },
+        //     from: { color: '#aaa', width: 1 },
+        //     to: { color: '#006622', width: 4 },
+        //     step: function(state, circle) {
+        //       circle.path.setAttribute('stroke', state.color);
+        //       circle.path.setAttribute('stroke-width', state.width);
           
-              var value = Math.round(circle.value() * 100);
-              if (value === 0) {
-                circle.setText('');
-              } else {
-                circle.setText(value);
-              }
-            }})
+        //       var value = Math.round(circle.value() * 100);
+        //       if (value === 0) {
+        //         circle.setText('');
+        //       } else {
+        //         circle.setText(value);
+        //       }
+        //     }})
           
-            twelveAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            twelveAnimation.text.style.fontSize = '2rem';
+        //     twelveAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+        //     twelveAnimation.text.style.fontSize = '2rem';
             $("#headingFive").click(function(){
                 twelveAnimation.animate(0.70);
             });
