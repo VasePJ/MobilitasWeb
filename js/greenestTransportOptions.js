@@ -137,37 +137,37 @@ $("#elCarGreenestTranspprtOpt").click(function(){
 });
 
     // sixt animation
-    var sixtAnimation = new ProgressBar.Circle("#container5", {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-          autoStyleContainer: false
-        },
-        from: { color: '#aaa', width: 1 },
-        to: { color: '#006622', width: 4 },
-        // Set default step function for all animate calls
-        step: function(state, circle) {
-          circle.path.setAttribute('stroke', state.color);
-          circle.path.setAttribute('stroke-width', state.width);
+    // var sixtAnimation = new ProgressBar.Circle("#container5", {
+    //     color: '#aaa',
+    //     // This has to be the same size as the maximum width to
+    //     // prevent clipping
+    //     strokeWidth: 4,
+    //     trailWidth: 1,
+    //     easing: 'easeInOut',
+    //     duration: 1400,
+    //     text: {
+    //       autoStyleContainer: false
+    //     },
+    //     from: { color: '#aaa', width: 1 },
+    //     to: { color: '#006622', width: 4 },
+    //     // Set default step function for all animate calls
+    //     step: function(state, circle) {
+    //       circle.path.setAttribute('stroke', state.color);
+    //       circle.path.setAttribute('stroke-width', state.width);
       
-          var value = Math.round(circle.value() * 100);
-          if (value === 0) {
-            circle.setText('');
-          } else {
-            circle.setText(value);
-          }
-        }})
+    //       var value = Math.round(circle.value() * 100);
+    //       if (value === 0) {
+    //         circle.setText('');
+    //       } else {
+    //         circle.setText(value);
+    //       }
+    //     }})
       
-        sixtAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        sixtAnimation.text.style.fontSize = '2rem';
-        $("#taxiGreenestTranspprtOpt").click(function(){
-            sixtAnimation.animate(0.70);
-        });
+    //     sixtAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    //     sixtAnimation.text.style.fontSize = '2rem';
+    //     // $("#taxiGreenestTranspprtOpt").click(function(){
+    //     //     sixtAnimation.animate(0.70);
+    //     // });
 
     // seventh animation
     var seventhAnimation = new ProgressBar.Circle("#container6", {
@@ -342,39 +342,39 @@ $("#elCarGreenestTranspprtOpt").click(function(){
           
         //     twelveAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
         //     twelveAnimation.text.style.fontSize = '2rem';
-            $("#headingFive").click(function(){
-                twelveAnimation.animate(0.70);
-            });
+            // $("#headingFive").click(function(){
+            //     twelveAnimation.animate(0.70);
+            // });
 
         // animation thirteen
 
-        var thirteenAnimation = new ProgressBar.Circle("#containerResponsiveSix", {
-            color: '#aaa',
-            strokeWidth: 4,
-            trailWidth: 1,
-            easing: 'easeInOut',
-            duration: 1400,
-            text: {
-              autoStyleContainer: false
-            },
-            from: { color: '#aaa', width: 1 },
-            to: { color: '#006622', width: 4 },
-            step: function(state, circle) {
-              circle.path.setAttribute('stroke', state.color);
-              circle.path.setAttribute('stroke-width', state.width);        
-              var value = Math.round(circle.value() * 100);
-              if (value === 0) {
-                circle.setText('');
-              } else {
-                circle.setText(value);
-              }
-            }})
+        // var thirteenAnimation = new ProgressBar.Circle("#containerResponsiveSix", {
+        //     color: '#aaa',
+        //     strokeWidth: 4,
+        //     trailWidth: 1,
+        //     easing: 'easeInOut',
+        //     duration: 1400,
+        //     text: {
+        //       autoStyleContainer: false
+        //     },
+        //     from: { color: '#aaa', width: 1 },
+        //     to: { color: '#006622', width: 4 },
+        //     step: function(state, circle) {
+        //       circle.path.setAttribute('stroke', state.color);
+        //       circle.path.setAttribute('stroke-width', state.width);        
+        //       var value = Math.round(circle.value() * 100);
+        //       if (value === 0) {
+        //         circle.setText('');
+        //       } else {
+        //         circle.setText(value);
+        //       }
+        //     }})
           
-            thirteenAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            thirteenAnimation.text.style.fontSize = '2rem';
-            $("#headingSix").click(function(){
-                thirteenAnimation.animate(0.70);
-            });
+            // thirteenAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+            // thirteenAnimation.text.style.fontSize = '2rem';
+            // $("#headingSix").click(function(){
+            //     thirteenAnimation.animate(0.70);
+            // });
 
         // animation fourtheen
 

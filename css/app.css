@@ -13,10 +13,14 @@ body {
 #navbarBGC {
     background-color: white;
 }
+.separator{
+    height: 10px;
+    background-color: white;
+}
 #logo img {
-    width: 6em;
-    margin-left: 35px;
-    margin-top: -10px;
+        width: 15em;
+        margin-left: 35px;
+        margin-top: -8px;
 }
 #bs-example-navbar-collapse-1 {
     margin-top: 12px;
@@ -30,8 +34,8 @@ body {
     color: red;
 }
 #heroImage {
-    background-image: url('../img/cyclist-4546766_1920.jpg');
-    height: 70vh;
+    background-image: url('../img/hero-img.jpeg');
+    height: 56vh;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -94,7 +98,7 @@ body {
     background-color: #fbbe00;
 }
 .nav-pills>li {
-    max-width: 200px;
+    max-width: 205px;
     max-height: 50px;
     color: black;
     background-color: #fbbe00;
@@ -643,7 +647,7 @@ body {
         margin-right: 0;
     }
     #logo img {
-        margin-top: 4px;
+        margin-top: -6px;
     }
     .headerText {
         font-size: 15px;
@@ -723,6 +727,9 @@ body {
     .copyRightsFontSize {
         font-size: 13px;
     }
+    #logo img {
+        width: 13em;
+    }
 }
 @media only screen and (min-width: 426px) and (max-width: 767px) {
     #landingPage {
@@ -757,3 +764,4 @@ body {
         margin: 0 auto;
     }
 }
+
