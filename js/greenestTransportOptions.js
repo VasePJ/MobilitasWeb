@@ -316,66 +316,6 @@ $("#elCarGreenestTranspprtOpt").click(function(){
                 elevenAnimation.animate(0.70);
             });
 
-        // animation twelve 
-        // var twelveAnimation = new ProgressBar.Circle("#containerResponsiveFive", {
-        //     color: '#aaa',
-        //     strokeWidth: 4,
-        //     trailWidth: 1,
-        //     easing: 'easeInOut',
-        //     duration: 1400,
-        //     text: {
-        //       autoStyleContainer: false
-        //     },
-        //     from: { color: '#aaa', width: 1 },
-        //     to: { color: '#006622', width: 4 },
-        //     step: function(state, circle) {
-        //       circle.path.setAttribute('stroke', state.color);
-        //       circle.path.setAttribute('stroke-width', state.width);
-          
-        //       var value = Math.round(circle.value() * 100);
-        //       if (value === 0) {
-        //         circle.setText('');
-        //       } else {
-        //         circle.setText(value);
-        //       }
-        //     }})
-          
-        //     twelveAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        //     twelveAnimation.text.style.fontSize = '2rem';
-            // $("#headingFive").click(function(){
-            //     twelveAnimation.animate(0.70);
-            // });
-
-        // animation thirteen
-
-        // var thirteenAnimation = new ProgressBar.Circle("#containerResponsiveSix", {
-        //     color: '#aaa',
-        //     strokeWidth: 4,
-        //     trailWidth: 1,
-        //     easing: 'easeInOut',
-        //     duration: 1400,
-        //     text: {
-        //       autoStyleContainer: false
-        //     },
-        //     from: { color: '#aaa', width: 1 },
-        //     to: { color: '#006622', width: 4 },
-        //     step: function(state, circle) {
-        //       circle.path.setAttribute('stroke', state.color);
-        //       circle.path.setAttribute('stroke-width', state.width);        
-        //       var value = Math.round(circle.value() * 100);
-        //       if (value === 0) {
-        //         circle.setText('');
-        //       } else {
-        //         circle.setText(value);
-        //       }
-        //     }})
-          
-            // thirteenAnimation.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            // thirteenAnimation.text.style.fontSize = '2rem';
-            // $("#headingSix").click(function(){
-            //     thirteenAnimation.animate(0.70);
-            // });
-
         // animation fourtheen
 
         var fourtheenAnimation = new ProgressBar.Circle("#containerResponsiveSeven", {

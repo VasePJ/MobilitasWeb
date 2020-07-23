@@ -65,21 +65,14 @@ $(document).ready(function () {
         showPinsByCategory("bus-stop");
     });
 
-    // let bikeMapButton = document.getElementById("bike-map-button");
-    // bikeMapButton.addEventListener('click', function(){
-    //     showPinsByCategory("bike-stop");
-    // });
+    
 
     let ferryMapButton = document.getElementById("ferry-map-button");
     ferryMapButton.addEventListener('click', function(){
         showPinsByCategory("ferry-stop");
     });
 
-    // let publicFerryVendorButton = document.getElementById("public-ferry-vendor-btn");
-    // publicFerryVendorButton.addEventListener('click', function () {
-    //     showPinsByVendor("public-transport-malta");
-    // });
-
+   
     let gozoChannelFerryButton = document.getElementById("gozo-channel-ferry-vendor-btn");
     gozoChannelFerryButton.addEventListener('click', function () {
         showPinsByVendor("gozo-channel");
